@@ -8,75 +8,135 @@
 </head>
 <body>
   <header class="header">
-    <a href="#" class="header__logo"></a>
+    <div class="header__logo">
+      <a class="header__logo-link">
+        <img class="header__logo-image" src="#">
+      </a>
+    </div>
+
+    <button class="header__toggle-nav" type="button" aria-label="Открыть меню"></button>
 
     <nav class="header__nav">
       <ul class="header__categories">
-        <li>Woman</li>
-        <li>Man</li>
-        <li>New</li>
+        <li class="header__categories-item"><a class="header__categoties-link" href="woman-jackets.html">Woman</a></li>
+        <li class="header__categories-item"><a class="header__categoties-link">Man</a></li>
+        <li class="header__categories-item"><a class="header__categoties-link">New</a></li>
       </ul>
 
       <ul class="header__actions actions">
-        <li class="actions__button actions__button__find"></li>
-        <li class="actions__button actions__button__basket"></li>
+        <li class="actions__button">
+          <button class="actions__button-find"></button>
+        </li>
+        <li class="actions__button">
+          <button class="actions__button-basket"></button>
+        </li>
       </ul>
     </nav>
-    <div class="header_slogan slogan">
-      <h1 class="hidden">DENIM - the quality you deserve</h1>
-      <p class="slogan__text">The quality you deserve</p>
-      <p class="slogan__brand">DENIM</p>
-    </div>
-
-    <button class="header__button button">Check new collection</button>
-
   </header>
 
 
   <main class="main">
-    <section class="main__bestsellers bestsellers">
-      <h2 class="bestsellers__text">Bestsellers</h2>
+
+    <section class="main__container">
+      <div>
+        <img class="main__image" src="#" alt="">
+      </div>
+
+      <div class="main__slogan slogan">
+        <h1 class="visually-hidden">DENIM - the quality you deserve</h1>
+
+        <p class="slogan__text">The quality you deserve</p>
+        <p class="slogan__brand">DENIM</p>
+      </div>
+
+      <button class="main__button button" type="button">Check new collection</button>
+    </section>
+
+    <section class="catalog bestsellers">
+      <h2 class="catalog__heading bestsellers__heading">Bestsellers</h2>
       <article class="catalog__item">
-        <img src="#" alt="">
+        <img class="catalog__item-img" src="#" alt="">
         <div class="catalog_desc desc">
           <p class="desc__category">Jacket</p>
           <p class="desc__price">$ 120</p>
         </div>
       </article>
       <article class="catalog__item">
-        <img src="#" alt="">
+        <img class="catalog__item-img" src="#" alt="">
         <div class="catalog_desc desc">
           <p class="desc__category">Overalls</p>
           <p class="desc__price">$ 140</p>
         </div>
       </article>
       <article class="catalog__item">
-        <img src="#" alt="">
+        <img class="catalog__item-img" src="#" alt="">
         <div class="catalog_desc desc">
           <p class="desc__category">Jacket</p>
           <p class="desc__price">$ 90</p>
         </div>
       </article>
       <article class="catalog__item">
-        <img src="#" alt="">
+        <img class="catalog__item-img" src="#" alt="">
         <div class="catalog_desc desc">
           <p class="desc__category">Overalls</p>
           <p class="desc__price">$ 160</p>
         </div>
       </article>
 
-      <button class="catalog_more"></button>
+      <button class="catalog_more" type="button">View all</button>
     </section>
 
-    <section class="main_fall-collection">
-      <div></div>
+    <section class="collection">
+      <div class="collection__call">
+        <p class="collection__name">Street fashion collection</p>
+        <p class="collection__season">Fall 2019</p>
+        <button class="collection__button button" type="button">Shop now</button>
+      </div>
+      <img class="collection__img" src="#" alt="">
+    </section>
 
+    <section class="catalog category">
+      <h2 class="catalog__heading category__heading">Shop by category</h2>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="#" alt="">
+        <p class="catalog__desc">Jeans</p>
+      </article>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="#" alt="">
+        <p class="catalog__desc">Shirts</p>
+      </article>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="#" alt="">
+        <p class="catalog__desc">Overalls</p>
+      </article>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="#" alt="">
+        <p class="catalog__desc">Jackets</p>
+      </article>
+
+      <button class="catalog_more" type="button">View all</button>
     </section>
   </main>
 
-
-  <footer>
-
+  <footer class="footer">
+    <img class="footer__logo" src="#">
+    <nav class="footer__nav">
+      <ul>
+        <li>Shop</li>
+        <li>Delivery</li>
+        <li>Sitemap</li>
+        <li>Service</li>
+        <li>Contacts</li>
+      </ul>
+    </nav>
+    <div class="footer__social social">
+      <ul class="social__list">
+        <li class="social-item social-item--fb"></li>
+        <li class="social-item social-item--inst"></li>
+        <li class="social-item social-item--pint"></li>
+        <li class="social-item social-item--tw"></li>
+      </ul>
+    </div>
   </footer>
 
 </body>
