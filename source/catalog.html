@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <title>Main - Denim</title>
+  <title>Catalog - Denim</title>
 </head>
 <body>
   <header class="header">
@@ -36,71 +36,84 @@
     </div>
   </header>
 
-
   <main class="main">
-    <h1 class="visually-hidden">DENIM - the quality you deserve</h1>
+    <section class="category">
+      <div class="category__wrapper center">
+        <span class="category__name">Woman /</span>
+        <span class="category__filter">Jackets</span>
+      </div>
+    </section>
 
-    <section class="main-info info">
-      <div class="info__wrapper center">
-        <div>
-          <img class="info__image" src="#" alt="">
+    <section class="filter">
+      <div class="filter__wrapper center">
+        <div class="filter__closed">
+
         </div>
 
-        <div class="info__slogan slogan">
-          <p class="slogan__text">The quality you deserve</p>
-          <p class="slogan__brand">DENIM</p>
+        <div class="filter__opened">
+          <ul class="filter__settings-list settings">
+            <li class="settings__clear">Clear all</li>
+            <li class="settings__close">Close</li>
+          </ul>
+
+          <ul class="filter__list">
+            <li class="filter__item">Price</li>
+            <li class="filter__item">Color</li>
+            <li class="filter__item">Collection</li>
+          </ul>
         </div>
 
-        <button class="info__button button" type="button">Check new collection</button>
+        <button class="filter__button button" type="button">Apply (9 products)</button>
       </div>
     </section>
 
     <section class="catalog">
       <div class="catalog__wrapper center">
-        <h2 class="catalog__heading">Bestsellers</h2>
         <article class="catalog__item">
           <img class="catalog__item-img" src="#" alt="">
           <div class="catalog_desc desc">
             <p class="desc__category">Jacket</p>
-            <p class="desc__price">$ 120</p>
+            <p class="desc__price">$ 40</p>
           </div>
         </article>
         <article class="catalog__item">
           <img class="catalog__item-img" src="#" alt="">
           <div class="catalog_desc desc">
-            <p class="desc__category">Overalls</p>
-            <p class="desc__price">$ 140</p>
+            <p class="desc__category">Jacket</p>
+            <p class="desc__price">$ 70</p>
           </div>
         </article>
-
-        <button class="catalog_more" type="button">View all</button>
+        <article class="catalog__item">
+          <img class="catalog__item-img" src="#" alt="">
+          <div class="catalog_desc desc">
+            <p class="desc__category">Jacket</p>
+            <p class="desc__price">$ 160</p>
+          </div>
+        </article>
+        <article class="catalog__item">
+          <img class="catalog__item-img" src="#" alt="">
+          <div class="catalog_desc desc">
+            <p class="desc__category">Jacket</p>
+            <p class="desc__price">$ 40</p>
+          </div>
+        </article>
+        <article class="catalog__item">
+          <img class="catalog__item-img" src="#" alt="">
+          <div class="catalog_desc desc">
+            <p class="desc__category">Jacket</p>
+            <p class="desc__price">$ 110</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="collection">
-      <div class="collection__wrapper center">
-        <div class="collection__call">
-          <p class="collection__name">Street fashion collection</p>
-          <p class="collection__season">Fall 2019</p>
-          <button class="collection__button button" type="button">Shop now</button>
+    <section class="catalog-bar">
+      <div class="catalog-bar__wrapper center">
+        <div class="catalog-bar__wrapper center">
+          <p class="catalog-bar__items">Showing 9 of 45 items</p>
+          <div class="catalog-bar__progress"></div>
+          <button class="catalog-bar__button button" type="button">Load more</button>
         </div>
-        <img class="collection__img" src="#" alt="">
-      </div>
-    </section>
-
-    <section class="catalog category">
-      <div class="category__wrapper center">
-        <h2 class="catalog__heading category__heading">Shop by category</h2>
-        <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <p class="catalog__desc">Jeans</p>
-        </article>
-        <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <p class="catalog__desc">Shirts</p>
-        </article>
-
-        <button class="catalog_more" type="button">View all</button>
       </div>
     </section>
   </main>
