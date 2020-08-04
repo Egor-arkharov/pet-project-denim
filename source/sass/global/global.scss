@@ -12,11 +12,10 @@ body {
   margin: 0 auto;
   padding: 0;
 
-  min-width: 320px;
-
-  // font-family: @main-font;
-  // color: @text-color;
-  // background-color: @body-color;
+  min-width: $mobile-width;
+  font-family: $main-font;
+  color: $brand-color;
+  background-color: $body-color;
 }
 
 img {
@@ -26,4 +25,14 @@ img {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $brand-color;
+}
+
+button {
+  border: none;
+  background: none;
 }

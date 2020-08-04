@@ -1,0 +1,31 @@
+.header__logo {
+  padding: 20px 0;
+  height: 57px;
+  text-align: center;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+
+  height: 70px;
+  background-color: $background-color;
+  margin: 0 -15px;
+  padding: 30px 15px;
+}
+
+.header__categories {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header__categories-item {
+  margin-right: 25px;
+}
+
+.header__actions {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}

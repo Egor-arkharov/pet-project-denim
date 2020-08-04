@@ -1,14 +1,15 @@
 //Все файлы scss
 
-@import "global/global.scss";
-@import "global/fonts.scss";
 @import "global/mixins.scss";
 @import "global/variables.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
 
 @import "blocks/actions.scss";
 @import "blocks/catalog-bar.scss";
 @import "blocks/catalog.scss";
 @import "blocks/category.scss";
+@import "blocks/center.scss";
 @import "blocks/collection.scss";
 @import "blocks/features.scss";
 @import "blocks/filter.scss";

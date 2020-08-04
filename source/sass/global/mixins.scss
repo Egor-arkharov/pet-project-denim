@@ -1,0 +1,51 @@
+@mixin button {
+  display: block;
+  padding: 27px 16px;
+
+  font-size: $font-size-l;
+  line-height: $line-height-l;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: $brand-color;
+  color: $body-color;
+
+  cursor: pointer;
+}
+
+// @mixin h-button {
+//   display: block;
+//   padding: 11px 0;
+
+//   font-size: $font-size-xs;
+//   line-height: $line-height-m;
+//   text-decoration: none;
+//   text-align: center;
+//   text-transform: uppercase;
+
+//   background-color: $brand-color;
+//   color: $body-color;
+
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: $hover-btn-color;
+//   }
+
+//   @media (min-width: $tablet-width) {
+//     @include same-fs-lh(20px);
+//   }
+// }
+
+// @mixin list-reset {
+//   @include marg-padd-reset;
+//   list-style: none;
+// }
+
+// @mixin same-fs-lh($px) {
+//   @include marg-padd-reset;
+
+//   font-size: $px;
+//   line-height: $px;
+//   font-weight: $font-normal;
+// }

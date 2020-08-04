@@ -1,0 +1,14 @@
+.actions__item {
+  margin-right: 25px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.actions__button {
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+}
