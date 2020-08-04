@@ -1,0 +1,32 @@
+.catalog {
+  margin: 60px 0;
+}
+
+.catalog__heading {
+  @include font-xl;
+  margin-bottom: 40px;
+}
+
+.catalog__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__category {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.catalog__price {
+  @include font-s;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.catalog_more {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0;
+  border-bottom: 2px solid $brand-color;
+}

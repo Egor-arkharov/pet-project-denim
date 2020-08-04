@@ -1,16 +1,58 @@
 @mixin button {
+  @include font-l;
+
   display: block;
+
+  margin: 0 auto;
   padding: 27px 16px;
 
-  font-size: $font-size-l;
-  line-height: $line-height-l;
   text-decoration: none;
   text-align: center;
 
   background-color: $brand-color;
   color: $body-color;
+  border: none;
 
   cursor: pointer;
+}
+
+@mixin basic-font {
+  margin: 0;
+  padding: 0;
+  font-style: $font-style;
+  font-weight: $font-weight;
+}
+
+@mixin font-s {
+  @include basic-font;
+
+  font-weight: bold;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+}
+
+@mixin font-l {
+  @include basic-font;
+  font-size: $font-size-l;
+  line-height: $line-height-l;
+}
+
+@mixin font-m {
+  @include basic-font;
+  font-size: $font-size-m;
+  line-height: $line-height-m;
+}
+
+@mixin font-xl {
+  @include basic-font;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+}
+
+@mixin font-xxl {
+  @include basic-font;
+  font-size: $font-size-xxl;
+  line-height: $line-height-xxl;
 }
 
 // @mixin h-button {

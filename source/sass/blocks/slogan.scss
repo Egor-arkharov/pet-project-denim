@@ -1,0 +1,11 @@
+.slogan__text {
+  @include font-m;
+  color: $alt-color;
+}
+
+.slogan__brand {
+  @include font-xxl;
+  font-family: $alt-font;
+
+  margin: 20px 0 0;
+}
