@@ -1,3 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0 auto;
+  padding: 0;
+
+  min-width: $mobile-width;
+  font-family: $main-font;
+  color: $brand-color;
+  background-color: $body-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
 }

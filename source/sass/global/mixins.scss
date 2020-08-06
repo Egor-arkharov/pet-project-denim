@@ -1,0 +1,93 @@
+@mixin button {
+  @include font-l;
+
+  display: block;
+
+  margin: 0 auto;
+  padding: 24px 27px;
+
+  text-decoration: none;
+  text-align: center;
+
+  background-color: $brand-color;
+  color: $body-color;
+  border: none;
+
+  cursor: pointer;
+}
+
+@mixin basic-font {
+  margin: 0;
+  padding: 0;
+  font-style: $font-style;
+  font-weight: $font-weight;
+}
+
+@mixin font-s {
+  @include basic-font;
+
+  font-weight: bold;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+}
+
+@mixin font-l {
+  @include basic-font;
+  font-size: $font-size-l;
+  line-height: $line-height-l;
+}
+
+@mixin font-m {
+  @include basic-font;
+  font-size: $font-size-m;
+  line-height: $line-height-m;
+}
+
+@mixin font-xl {
+  @include basic-font;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+}
+
+@mixin font-xxl {
+  @include basic-font;
+  font-size: $font-size-xxl;
+  line-height: $line-height-xxl;
+}
+
+// @mixin h-button {
+//   display: block;
+//   padding: 11px 0;
+
+//   font-size: $font-size-xs;
+//   line-height: $line-height-m;
+//   text-decoration: none;
+//   text-align: center;
+//   text-transform: uppercase;
+
+//   background-color: $brand-color;
+//   color: $body-color;
+
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: $hover-btn-color;
+//   }
+
+//   @media (min-width: $tablet-width) {
+//     @include same-fs-lh(20px);
+//   }
+// }
+
+// @mixin list-reset {
+//   @include marg-padd-reset;
+//   list-style: none;
+// }
+
+// @mixin same-fs-lh($px) {
+//   @include marg-padd-reset;
+
+//   font-size: $px;
+//   line-height: $px;
+//   font-weight: $font-normal;
+// }

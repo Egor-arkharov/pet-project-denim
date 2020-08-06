@@ -1,0 +1,33 @@
+.header__logo {
+  padding: 18px 0 15px;
+  text-align: center;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $background-color;
+  margin: 0 -15px;
+  padding: 25px 15px 30px;
+}
+
+.header__categories {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header__categories-item {
+  margin-right: 25px;
+}
+
+.header__categories-link {
+  color: $brand-color;
+}
+
+.header__actions {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
