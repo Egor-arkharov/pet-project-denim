@@ -1,5 +1,5 @@
 .header__logo {
-  padding: 20px 0;
+  padding: 18px 0 15px;
   text-align: center;
 }
 
@@ -9,7 +9,7 @@
 
   background-color: $background-color;
   margin: 0 -15px;
-  padding: 30px 15px;
+  padding: 25px 15px 30px;
 }
 
 .header__categories {
@@ -20,6 +20,10 @@
 
 .header__categories-item {
   margin-right: 25px;
+}
+
+.header__categories-link {
+  color: $brand-color;
 }
 
 .header__actions {

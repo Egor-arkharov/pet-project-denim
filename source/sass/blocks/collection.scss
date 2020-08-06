@@ -1,0 +1,43 @@
+.collection__wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 15px 0;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 226px;
+    background-image: url("../img/icons/frame_big_mob.svg");
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.collection__call {
+  margin: 0 15px;
+  padding: 36px 0 15px;
+  min-height: 211px;
+  background-color: $background-color;
+  top: 0;
+  left: 15px;
+}
+
+.collection__name {
+  @include font-m;
+
+  color: $alt-color;
+}
+
+.collection__season {
+  @include font-xl;
+
+  font-weight: bold;
+  margin: 2px 0 24px;
+}
+
+.collection__button {
+  padding: 20px 38px;
+}

@@ -1,32 +1,36 @@
-.catalog {
-  margin: 60px 0;
+.catalog__wrapper {
+  padding: 52px 0 59px;
 }
 
 .catalog__heading {
   @include font-xl;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .catalog__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog__item {
+  margin-bottom: 27px;
 }
 
 .catalog__category {
-  margin: 0;
-  margin-top: 15px;
+  margin: 7px 0 3px;
 }
 
 .catalog__price {
   @include font-s;
-  margin: 0;
-  margin-top: 10px;
 }
 
 .catalog_more {
+  @include font-l;
+
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 8px;
   padding: 0;
   border-bottom: 2px solid $brand-color;
 }
