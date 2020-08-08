@@ -1,0 +1,30 @@
+.product__wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $background-color;
+}
+
+.product__name {
+  @include font-xl;
+
+  margin-bottom: 30px;
+}
+
+.produce__desc {
+  @include font-s;
+
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.product__price {
+  @include font-m;
+  font-weight: 500;
+
+  margin-bottom: 35px;
+}
+
+.product__button {
+  margin: 0;
+  padding: 27px 55px;
+}

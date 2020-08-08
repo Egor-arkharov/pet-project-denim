@@ -18,14 +18,14 @@
 
       <button class="header__toggle-nav visually-hidden" type="button" aria-label="Открыть меню"></button>
 
-      <nav class="header__nav">
+      <nav class="header__nav visually-hidden">
         <ul class="header__categories">
           <li class="header__categories-item"><a class="header__categories-link" href="index.html">Woman</a></li>
           <li class="header__categories-item"><a class="header__categories-link" href="catalog.html">Man</a></li>
           <li class="header__categories-item"><a class="header__categories-link" href="product.html">New</a></li>
         </ul>
 
-        <ul class="header__actions actions">
+        <ul class="header__actions actions visually-hidden">
           <li class="actions__item">
             <button class="actions__button actions__button-find"><img src="img/icons/search_mob.svg" alt="Поиск по сайту" width="16" height="16"></button>
           </li>
@@ -40,55 +40,75 @@
   <main>
     <section class="slider">
       <div class="slider__wrapper center">
-        <img class="slider__image" src="#" alt="">
+        <img class="slider__image" src="img/mob/slider_overalls.png" alt="">
       </div>
     </section>
 
     <section class="product">
       <div class="product__wrapper center">
         <h1 class="product__name">Overalls</h1>
+
         <p class="produce__desc">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front and back pockets.</p>
+
         <div class="producе__feature features">
           <p class="features__name">Color</p>
-          <ul class="features__colors-list">
-            <li class="features__colors-item"></li>
-            <li class="features__colors-item"></li>
-            <li class="features__colors-item"></li>
+          <ul class="features__list features__list-color">
+            <li class="features__item features-color__item"></li>
+            <li class="features__item features-color__item"></li>
+            <li class="features__item features-color__item"></li>
           </ul>
         </div>
+
         <div class="producе__feature features">
           <p class="features__name">Size</p>
-          <ul class="features__size-list">
-            <li class="features__size-item">XS</li>
-            <li class="features__size-item">S</li>
-            <li class="features__size-item">M</li>
-            <li class="features__size-item">L</li>
-            <li class="features__size-item">XL</li>
+          <ul class="features__list features__list-size">
+            <li class="features__item features-size__item">XS</li>
+            <li class="features__item features-size__item">S</li>
+            <li class="features__item features-size__item">M</li>
+            <li class="features__item features-size__item">L</li>
+            <li class="features__item features-size__item">XL</li>
           </ul>
         </div>
-        <p class="product__price">$ 160</p>
-      </div>
 
-      <button class="product__button button" type="button">Add to cart</button>
+        <p class="product__price">$ 160</p>
+
+        <button class="product__button button" type="button">Add to cart</button>
+
+      </div>
     </section>
 
     <section class="catalog">
       <div class="catalog__wrapper center">
         <h2 class="catalog__heading">You may also like</h2>
-        <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <div class="catalog_desc desc">
-            <p class="desc__category">Overalls</p>
-            <p class="desc__price">$ 140</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <div class="catalog_desc desc">
-            <p class="desc__category">Overalls</p>
-            <p class="desc__price">$ 110</p>
-          </div>
-        </article>
+        <div class="catalog__list">
+          <article class="catalog__item">
+            <img class="catalog__item-img" src="img/mob/bestsellers_jacket_120.png" alt="Жакет за 120 бачинских" width="130" height="160">
+            <div class="catalog_desc">
+              <p class="catalog__category">Jacket</p>
+              <p class="catalog__price">$ 120</p>
+            </div>
+          </article>
+          <article class="catalog__item">
+            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
+            <div class="catalog_desc desc">
+              <p class="catalog__category">Overalls</p>
+              <p class="catalog__price">$ 140</p>
+            </div>
+          </article>
+          <article class="catalog__item">
+            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
+            <div class="catalog_desc desc">
+              <p class="catalog__category">Overalls</p>
+              <p class="catalog__price">$ 140</p>
+            </div>
+          </article>
+          <article class="catalog__item">
+            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
+            <div class="catalog_desc desc">
+              <p class="catalog__category">Overalls</p>
+              <p class="catalog__price">$ 140</p>
+            </div>
+          </article>
 
         <button class="catalog_more" type="button">View all</button>
       </div>
@@ -109,10 +129,10 @@
       </nav>
       <div class="footer__social social">
         <ul class="social__list">
-          <li class="social__item social__item--fb"><a class="social-link" href=""><img src="img/icons/sm_fb.svg" alt="Фейсбук"></a></li>
-          <li class="social__item social__item--inst"><a class="social-link" href=""><img src="img/icons/sm_inst.svg" alt="Инстаграм"></a></li>
-          <li class="social__item social__item--pint"><a class="social-link" href=""><img src="img/icons/sm_pint.svg" alt="Пинтерест"></a></li>
-          <li class="social__item social__item--tw"><a class="social-link" href=""><img src="img/icons/sm_tw.svg" alt="Твиттер"></a></li>
+          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Фейсбук"></a></li>
+          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Инстаграм"></a></li>
+          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Пинтерест"></a></li>
+          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Твиттер"></a></li>
         </ul>
       </div>
     </div>
