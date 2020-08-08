@@ -3,9 +3,25 @@
   margin: 0 auto;
   width: 95%;
 
+  position: relative;
+
   padding: 17px;
   padding-right: 60%;
 
   border: 2px solid $brand-color;
   cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    top: 50%;
+    margin-top: -5px;
+    right: 20px;
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
