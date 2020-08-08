@@ -18,14 +18,14 @@
 
       <button class="header__toggle-nav visually-hidden" type="button" aria-label="Открыть меню"></button>
 
-      <nav class="header__nav">
+      <nav class="header__nav visually-hidden">
         <ul class="header__categories">
           <li class="header__categories-item"><a class="header__categories-link" href="index.html">Woman</a></li>
           <li class="header__categories-item"><a class="header__categories-link" href="catalog.html">Man</a></li>
           <li class="header__categories-item"><a class="header__categories-link" href="product.html">New</a></li>
         </ul>
 
-        <ul class="header__actions actions">
+        <ul class="header__actions actions visually-hidden">
           <li class="actions__item">
             <button class="actions__button actions__button-find"><img src="img/icons/search_mob.svg" alt="Поиск по сайту" width="16" height="16"></button>
           </li>
@@ -38,20 +38,18 @@
   </header>
 
   <main class="main">
-    <section class="category">
-      <div class="category__wrapper center">
-        <span class="category__name">Woman /</span>
-        <span class="category__filter">Jackets</span>
-      </div>
-    </section>
+    <nav class="main-nav">
+      <ul class="main-nav__list center">
+        <li class="main-nav__item main-nav__item--name"><a class="main-nav__link">Woman</a></li>
+        <li class="main-nav__item main-nav__item--category"><a class="main-nav__link">Jackets</a></li>
+      </ul>
+    </nav>
 
     <section class="filter">
       <div class="filter__wrapper center">
-        <div class="filter__closed">
+        <button class="filter__closed-button" type="button">Filter by</button>
 
-        </div>
-
-        <div class="filter__opened">
+        <div class="filter__opened visually-hidden">
           <ul class="filter__settings-list settings">
             <li class="settings__clear">Clear all</li>
             <li class="settings__close">Close</li>
@@ -62,47 +60,75 @@
             <li class="filter__item">Color</li>
             <li class="filter__item">Collection</li>
           </ul>
-        </div>
 
-        <button class="filter__button button" type="button">Apply (9 products)</button>
+          <button class="filter__button button" type="button">Apply (9 products)</button>
+        </div>
       </div>
     </section>
 
     <section class="catalog">
-      <div class="catalog__wrapper center">
+      <div class="catalog__wrapper catalog__list center">
         <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <div class="catalog_desc desc">
-            <p class="desc__category">Jacket</p>
-            <p class="desc__price">$ 40</p>
+          <img class="catalog__item-img" src="img/mob/jacket_40.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 40</p>
           </div>
         </article>
         <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <div class="catalog_desc desc">
-            <p class="desc__category">Jacket</p>
-            <p class="desc__price">$ 70</p>
+          <img class="catalog__item-img" src="img/mob/jacket_70.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
           </div>
         </article>
         <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <div class="catalog_desc desc">
-            <p class="desc__category">Jacket</p>
-            <p class="desc__price">$ 160</p>
+          <img class="catalog__item-img" src="img/mob/jacket_60.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
           </div>
         </article>
         <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <div class="catalog_desc desc">
-            <p class="desc__category">Jacket</p>
-            <p class="desc__price">$ 40</p>
+          <img class="catalog__item-img" src="img/mob/jacket_50.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
           </div>
         </article>
         <article class="catalog__item">
-          <img class="catalog__item-img" src="#" alt="">
-          <div class="catalog_desc desc">
-            <p class="desc__category">Jacket</p>
-            <p class="desc__price">$ 110</p>
+          <img class="catalog__item-img" src="img/mob/jacket_160_big.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
+          </div>
+        </article>
+        <article class="catalog__item">
+          <img class="catalog__item-img" src="img/mob/jacket_40_2.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
+          </div>
+        </article>
+        <article class="catalog__item">
+          <img class="catalog__item-img" src="img/mob/jacket_110.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
+          </div>
+        </article>
+        <article class="catalog__item">
+          <img class="catalog__item-img" src="img/mob/jacket_35.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
+          </div>
+        </article>
+        <article class="catalog__item">
+          <img class="catalog__item-img" src="img/mob/jacket_85.png" alt="">
+          <div class="catalog_desc">
+            <p class="catalog__category">Jacket</p>
+            <p class="catalog__price">$ 120</p>
           </div>
         </article>
       </div>
@@ -110,11 +136,9 @@
 
     <section class="catalog-bar">
       <div class="catalog-bar__wrapper center">
-        <div class="catalog-bar__wrapper center">
-          <p class="catalog-bar__items">Showing 9 of 45 items</p>
-          <div class="catalog-bar__progress"></div>
-          <button class="catalog-bar__button button" type="button">Load more</button>
-        </div>
+        <p class="catalog-bar__items">Showing 9 of 45 items</p>
+        <div class="catalog-bar__progress"></div>
+        <button class="catalog-bar__button button" type="button">Load more</button>
       </div>
     </section>
   </main>
@@ -133,10 +157,10 @@
       </nav>
       <div class="footer__social social">
         <ul class="social__list">
-          <li class="social__item social__item--fb"><a class="social-link" href=""><img src="img/icons/sm_fb.svg" alt="Фейсбук"></a></li>
-          <li class="social__item social__item--inst"><a class="social-link" href=""><img src="img/icons/sm_inst.svg" alt="Инстаграм"></a></li>
-          <li class="social__item social__item--pint"><a class="social-link" href=""><img src="img/icons/sm_pint.svg" alt="Пинтерест"></a></li>
-          <li class="social__item social__item--tw"><a class="social-link" href=""><img src="img/icons/sm_tw.svg" alt="Твиттер"></a></li>
+          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Фейсбук"></a></li>
+          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Инстаграм"></a></li>
+          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Пинтерест"></a></li>
+          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Твиттер"></a></li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,11 @@
+.filter__closed-button {
+  @include font-m;
+  margin: 0 auto;
+  width: 95%;
+
+  padding: 17px;
+  padding-right: 60%;
+
+  border: 2px solid $brand-color;
+  cursor: pointer;
+}
