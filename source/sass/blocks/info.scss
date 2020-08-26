@@ -1,5 +1,6 @@
 .info__wrapper {
-  padding: 25px 0 50px;
+  padding-top: 25px;
+  padding-bottom: 50px;
   background-color: $background-color;
 }
 
@@ -7,7 +8,7 @@
   margin: 0;
   padding: 0;
   width: 202px;
-  height: 249px;
+  min-height: 249px;
   position: relative;
   left: 50%;
   margin-left: -202px * 0.5;
@@ -18,6 +19,9 @@
     content: "";
     position: absolute;
     background-image: url("../img/icons/frame_mob.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     width: 109px;
     height: 80px;
@@ -38,7 +42,160 @@
 }
 
 .info__slogan {
-  margin: 45px 0 30px;
+  margin: 45px 0 26px;
 
   text-align: center;
+}
+
+.info__social {
+  display: none;
+}
+
+.info__social-link {
+  color: $brand-color;
+}
+
+.info__scroll-down {
+  outline: none;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .info__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+
+    padding-top: 21px;
+    padding-bottom: 36px;
+  }
+
+
+  .info__image-container {
+    position: absolute;
+
+    margin: 0;
+    margin-left: 45px;
+    padding: 0;
+    width: 264px;
+
+    right: 75px;
+
+    &::before,
+    &::after {
+      width: 141px;
+      height: 104px;
+    }
+  }
+
+  .info__image {
+    height: 319px;
+  }
+
+  .info__slogan {
+    margin-left: 85px;
+  }
+
+  .info__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 63px;
+  }
+
+  .info__social-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .info__scroll-down {
+    margin: 0;
+    padding: 0;
+
+    width: 10px;
+    height: 27px;
+
+    background-image: url("../img/icons/arrowhead.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .info__social-item {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .info__wrapper {
+    position: relative;
+    margin-top: -188px;
+    padding: 50px 0 169px 263px;
+  }
+
+  .info__image-container {
+    width: 430px;
+    margin-left: -15px;
+
+    &::before,
+    &::after {
+      width: 232px;
+      height: 176px;
+    }
+
+    &::before {
+      top: -50px;
+      left: -50px;
+    }
+
+    &::after {
+      bottom: -50px;
+      right: -50px;
+    }
+  }
+
+  .info__image {
+    height: 517px;
+  }
+
+  .info__slogan {
+    z-index: 1;
+    margin: 0;
+    margin-top: 142px;
+
+    text-align: left;
+  }
+
+  .info__social {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    margin: 0;
+    padding: 0 51px 0 97px;
+  }
+
+  .info__social-list {
+    flex-direction: column-reverse;
+  }
+
+  .info__social-item {
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .info__scroll-down {
+    margin-top: 50px;
+  }
 }

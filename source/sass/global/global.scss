@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   padding: 0;
 
-  min-width: $mobile-width;
+  min-width: 320px;
   font-family: $main-font;
   color: $brand-color;
   background-color: $body-color;
@@ -25,6 +25,8 @@ img {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {

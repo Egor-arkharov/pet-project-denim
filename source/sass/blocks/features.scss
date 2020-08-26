@@ -1,19 +1,30 @@
 .features {
-  margin-bottom: 35px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-.features__name {
+.button-toggle {
   @include font-l;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 25px;
 }
 
-.features__list {
-  margin: 0;
-  padding: 0;
-  display: flex;
+.size__name {
+  @include font-m;
+  margin-right: 25px;
+  color: $alt-color;
+
+  cursor: pointer;
 }
 
-.features__item {
-  margin-right: 25px;
+.size__name--active {
+  color: $brand-color;
+}
+
+@media (min-width: $desktop-width) {
+  .button-toggle {
+    @include font-m;
+    margin-bottom: 25px;
+  }
 }

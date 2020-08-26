@@ -9,3 +9,28 @@
 
   margin: 6px 0;
 }
+
+@media (min-width: $tablet-width) {
+  .slogan__brand {
+    font-size: 97px;
+    margin: 13px 0;
+  }
+
+  .slogan__button {
+    padding: 23px 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slogan__brand {
+    font-size: 127px;
+    margin-top: 27px;
+    margin-bottom: 59px;
+  }
+
+  .slogan__button {
+    margin: 0;
+    margin-right: auto;
+    padding: 23px 41px;
+  }
+}

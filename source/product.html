@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <header class="header header--closed">
+  <header class="header header--nojs">
     <div class="header__wrapper center">
       <button class="header__toggle-nav" type="button" aria-label="Открыть меню"></button>
 
@@ -28,85 +28,162 @@
 
       <ul class="header__actions actions">
         <li class="actions__item">
-          <button class="actions__button actions__button-find"><img src="img/icons/search_mob.svg" alt="Поиск по сайту" width="16" height="16"></button>
+          <button class="actions__button actions__button-find"></button>
         </li>
         <li class="actions__item">
-          <button class="actions__button actions__button-basket"><img src="img/icons/basket_mob.svg" alt="Корзина" width="18" height="16"></button>
+          <button class="actions__button actions__button-basket"></button>
         </li>
       </ul>
     </div>
   </header>
 
   <main>
-    <section class="slider">
-      <div class="slider__wrapper center">
-        <img class="slider__image" src="img/mob/slider_overalls.png" alt="">
-      </div>
-    </section>
-
     <section class="product">
       <div class="product__wrapper center">
-        <h1 class="product__name">Overalls</h1>
+        <div class="product__img">
+          <div class="product__img-big-container">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/overalls_5_big.png">
+              <source media="(min-width: 768px)" srcset="img/tab/overalls_5_big.png">
+                <img class="product__img-big" src="img/mob/overalls_5_big.png" alt="">
+            </picture>
+          </div>
 
-        <p class="produce__desc">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front and back pockets.</p>
-
-        <div class="producе__feature features">
-          <p class="features__name">Color</p>
-          <ul class="features__list features__list-color">
-            <li class="features__item features-color__item"></li>
-            <li class="features__item features-color__item"></li>
-            <li class="features__item features-color__item"></li>
+          <ul class="product__img-list">
+            <li class="product__img-item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_1_small.png">
+                  <img class="product__img-small" src="img/tab/overalls_1_small.png" alt="">
+              </picture>
+            </li>
+            <li class="product__img-item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_2_small.png">
+                  <img class="product__img-small" src="img/tab/overalls_2_small.png" alt="">
+              </picture>
+            </li>
+            <li class="product__img-item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_3_small.png">
+                  <img class="product__img-small" src="img/tab/overalls_3_small.png" alt="">
+              </picture>
+            </li>
+            <li class="product__img-item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_4_small.png">
+                  <img class="product__img-small" src="img/tab/overalls_4_small.png" alt="">
+              </picture>
+            </li>
           </ul>
         </div>
 
-        <div class="producе__feature features">
-          <p class="features__name">Size</p>
-          <ul class="features__list features__list-size">
-            <li class="features__item features-size__item">XS</li>
-            <li class="features__item features-size__item">S</li>
-            <li class="features__item features-size__item">M</li>
-            <li class="features__item features-size__item">L</li>
-            <li class="features__item features-size__item">XL</li>
-          </ul>
+        <div class="product__spec center">
+          <h1 class="product__name">Overalls</h1>
+          <p class="product__desc">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front and back pockets.</p>
+
+
+          <form method="post" action="https://echo.htmlacademy.ru/courses">
+            <fieldset class="product__feature features color">
+              <legend class="features__name">Color</legend>
+              <ul class="features__list color__list">
+                <li class="color__item">
+                  <input type="checkbox" id="lightgreen" name="color-type" value="lightgreen" class="visually-hidden" checked>
+                  <label for="lightgreen" class="color__name color__name--lightgreen color__name--active"></label>
+                </li>
+                <li class="color__item">
+                  <input type="checkbox" id="blue" name="color-type" value="blue" class="visually-hidden">
+                  <label for="blue" class="color__name color__name--blue"></label>
+                </li>
+                <li class="color__item">
+                  <input type="checkbox" id="grey" name="color-type" value="grey" class="visually-hidden">
+                  <label for="grey" class="color__name color__name--grey"></label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="product__feature features size">
+              <legend class="features__name">Size</legend>
+              <ul class="features__list size__list">
+                <li>
+                  <input type="checkbox" id="xs" name="size" value="xs" class="features-input visually-hidden">
+                  <label for="xs" class="size__name">XS</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="s" name="size" value="s" class="features-input visually-hidden">
+                  <label for="s" class="size__name size__name--active">S</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="M" name="size" value="M" class="features-input visually-hidden">
+                  <label for="M" class="size__name">M</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="L" name="size" value="L" class="features-input visually-hidden">
+                  <label for="L" class="size__name">L</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="xl" name="size" value="xl" class="features-input visually-hidden">
+                  <label for="xl" class="size__name">XL</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <p class="product__price">$ 160</p>
+
+            <button class="product__button button" type="submit">Add to cart</button>
+          </form>
+
+
+
         </div>
-
-        <p class="product__price">$ 160</p>
-
-        <button class="product__button button" type="button">Add to cart</button>
-
       </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog catalog-more">
       <div class="catalog__wrapper center">
         <h2 class="catalog__heading">You may also like</h2>
         <div class="catalog__list">
           <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_jacket_120.png" alt="Жакет за 120 бачинских" width="130" height="160">
-            <div class="catalog_desc">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/bestsellers_overalls_140.png">
+              <source media="(min-width: 768px)" srcset="img/tab/bestsellers_overalls_140.png">
+                <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Жакет за 120 бачинских">
+            </picture>
+            <div class="catalog__desc">
+              <p class="catalog__category">Overalls</p>
+              <p class="catalog__price">$ 140</p>
+            </div>
+          </article>
+          <article class="catalog__item">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/overalls_big_110.png">
+              <source media="(min-width: 768px)" srcset="img/tab/overalls_big_110.png">
+                <img class="catalog__item-img" src="img/mob/overalls_110.png" alt="Жакет за 120 бачинских">
+            </picture>
+            <div class="catalog__desc">
+              <p class="catalog__category">Overalls</p>
+              <p class="catalog__price">$ 110</p>
+            </div>
+          </article>
+          <article class="catalog__item">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/jacket_big_70.png">
+              <source media="(min-width: 768px)" srcset="img/tab/jacket_big_70.png">
+                <img class="catalog__item-img" src="img/mob/jacket_70.png" alt="Жакет за 120 бачинских">
+            </picture>
+            <div class="catalog__desc">
               <p class="catalog__category">Jacket</p>
-              <p class="catalog__price">$ 120</p>
+              <p class="catalog__price">$ 70</p>
             </div>
           </article>
           <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
-            <div class="catalog_desc desc">
-              <p class="catalog__category">Overalls</p>
-              <p class="catalog__price">$ 140</p>
-            </div>
-          </article>
-          <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
-            <div class="catalog_desc desc">
-              <p class="catalog__category">Overalls</p>
-              <p class="catalog__price">$ 140</p>
-            </div>
-          </article>
-          <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
-            <div class="catalog_desc desc">
-              <p class="catalog__category">Overalls</p>
-              <p class="catalog__price">$ 140</p>
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/jacket_big_60.png">
+              <source media="(min-width: 768px)" srcset="img/tab/jacket_big_60.png">
+                <img class="catalog__item-img" src="img/mob/jacket_60.png" alt="Жакет за 120 бачинских">
+            </picture>
+            <div class="catalog__desc">
+              <p class="catalog__category">Jacket</p>
+              <p class="catalog__price">$ 60</p>
             </div>
           </article>
 
@@ -139,5 +216,6 @@
   </footer>
 
   <script src="js/header.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>

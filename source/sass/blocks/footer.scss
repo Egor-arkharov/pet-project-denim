@@ -15,10 +15,32 @@
 }
 
 .footer__links-name {
+  @include font-m;
+
   color: $body-color;
 }
 
 .footer__links-item {
   width: 40%;
   margin-bottom: 23px;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    text-align: center;
+    padding: 50px 0 45px;
+  }
+
+  .footer__links {
+    justify-content: center;
+  }
+
+  .footer__links-item:first-child {
+    flex-basis: 100%;
+    margin: 0 uato;
+  }
+
+  .footer__links-item {
+    flex: 1;
+  }
 }

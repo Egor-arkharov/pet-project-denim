@@ -11,9 +11,9 @@
   <link rel="preload" href="./fonts/anton-regular.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 <body>
-  <header class="header header--opened">
+  <header class="header header--nojs header--main">
     <div class="header__wrapper center">
-      <button class="header__toggle-nav visually-hidden" type="button" aria-label="Открыть меню"></button>
+      <button class="header__toggle-nav" type="button" aria-label="Открыть меню"></button>
 
       <nav class="header__nav">
         <ul class="header__categories">
@@ -31,10 +31,10 @@
 
       <ul class="header__actions actions">
         <li class="actions__item">
-          <button class="actions__button actions__button-find"><img src="img/icons/search_mob.svg" alt="Поиск по сайту" width="16" height="16"></button>
+          <button class="actions__button actions__button-find"></button>
         </li>
         <li class="actions__item">
-          <button class="actions__button actions__button-basket"><img src="img/icons/basket_mob.svg" alt="Корзина" width="18" height="16"></button>
+          <button class="actions__button actions__button-basket"></button>
         </li>
       </ul>
     </div>
@@ -44,18 +44,30 @@
   <main class="main">
     <h1 class="visually-hidden">DENIM - the quality you deserve</h1>
 
-    <section class="main__info info">
+    <section class="info">
       <div class="info__wrapper center">
           <div class="info__image-container">
-            <img class="info__image" src="img/mob/main_top_img.png" alt="Девушка в жакете на черном фоне" width="202" height="249">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/main_top_img.png">
+              <source media="(min-width: 768px)" srcset="img/tab/main_top_img.png">
+                <img class="info__image" src="img/mob/main_top_img.png" alt="Девушка в жакете на черном фоне">
+            </picture>
           </div>
 
         <div class="info__slogan slogan">
           <p class="slogan__text">The quality you deserve</p>
           <p class="slogan__brand">DENIM</p>
+          <button class="slogan__button button" type="button">Check new collection</button>
         </div>
 
-        <button class="info__button button" type="button">Check new collection</button>
+        <div class="info__social">
+          <button class="info__scroll-down" type="button"></button>
+
+          <ul class="info__social-list">
+            <li class="info__social-item"><a href="#" class="info__social-link">Instagram</a></li>
+            <li class="info__social-item"><a href="#" class="info__social-link">Facebook</a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -64,29 +76,45 @@
         <h2 class="catalog__heading">Bestsellers</h2>
         <div class="catalog__list">
           <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_jacket_120.png" alt="Жакет за 120 бачинских" width="130" height="160">
-            <div class="catalog_desc">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/bestsellers_jacket_120.png">
+              <source media="(min-width: 768px)" srcset="img/tab/bestsellers_jacket_120.png">
+                <img class="catalog__item-img" src="img/mob/bestsellers_jacket_120.png" alt="alt">
+            </picture>
+            <div class="catalog__desc">
               <p class="catalog__category">Jacket</p>
               <p class="catalog__price">$ 120</p>
             </div>
           </article>
           <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
-            <div class="catalog_desc desc">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/bestsellers_overalls_140.png">
+              <source media="(min-width: 768px)" srcset="img/tab/bestsellers_overalls_140.png">
+                <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140">
+            </picture>
+            <div class="catalog__desc">
               <p class="catalog__category">Overalls</p>
               <p class="catalog__price">$ 140</p>
             </div>
           </article>
           <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
-            <div class="catalog_desc desc">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/bestsellers_jacket_90.png">
+              <source media="(min-width: 768px)" srcset="img/tab/bestsellers_jacket_90.png">
+                <img class="catalog__item-img" src="img/mob/bestsellers_jacket_90.png" alt="Овероллы за 140">
+            </picture>
+            <div class="catalog__desc">
               <p class="catalog__category">Overalls</p>
               <p class="catalog__price">$ 140</p>
             </div>
           </article>
           <article class="catalog__item">
-            <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Овероллы за 140 бачинских" width="130" height="160">
-            <div class="catalog_desc desc">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="img/desk/bestsellers_overalls_160.png">
+              <source media="(min-width: 768px)" srcset="img/tab/bestsellers_overalls_160.png">
+                <img class="catalog__item-img" src="img/mob/bestsellers_overalls_160.png" alt="Овероллы за 140">
+            </picture>
+            <div class="catalog__desc">
               <p class="catalog__category">Overalls</p>
               <p class="catalog__price">$ 140</p>
             </div>
@@ -104,28 +132,51 @@
           <p class="collection__season">Fall 2019</p>
           <button class="collection__button button" type="button">Shop now</button>
         </div>
-        <img class="collection__img" src="img/mob/main_group_img.png" alt="Мужчина и женщина у стены в одежде Denim" width="320" height="226">
+
+        <picture>
+          <source media="(min-width: 1366px)" srcset="img/desk/main_group_img.png">
+          <source media="(min-width: 768px)" srcset="img/tab/main_group_img.png">
+            <img class="collection__img" src="img/mob/main_group_img.png" alt="Мужчина и женщина у стены в одежде Denim">
+        </picture>
+
+
       </div>
     </section>
 
     <section class="catalog category">
-      <div class="category__wrapper center">
-        <h2 class="catalog__heading category__heading">Shop by category</h2>
-          <div class="catalog__list">
-            <article class="catalog__item category__item">
-              <img class="catalog__item-img" src="img/mob/category_jeans.png" alt="Девушка в джинсах" width="130" height="160" >
+      <div class="catalog__wrapper center">
+        <h2 class="catalog__heading">Shop by category</h2>
+          <div class="catalog__list category__list">
+            <article class="catalog__item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/category_jeans.png">
+                <source media="(min-width: 768px)" srcset="img/tab/category_jeans.png">
+                  <img class="catalog__item-img" src="img/mob/category_jeans.png" alt="Девушка в джинсах">
+              </picture>
               <p class="category__name">Jeans</p>
             </article>
-            <article class="catalog__item category__item">
-              <img class="catalog__item-img" src="img/mob/category_shirts.png" alt="Парень в рубашке" width="130" height="126">
+            <article class="catalog__item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/category_shirts.png">
+                <source media="(min-width: 768px)" srcset="img/tab/category_shirts.png">
+                  <img class="catalog__item-img" src="img/mob/category_shirts.png" alt="Парень в рубашке">
+              </picture>
               <p class="category__name">Shirts</p>
             </article>
-            <article class="catalog__item category__item">
-              <img class="catalog__item-img" src="img/mob/category_shirts.png" alt="Парень в рубашке" width="130" height="126">
-              <p class="category__name">Shirts</p>
+            <article class="catalog__item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/category_overalls.png">
+                <source media="(min-width: 768px)" srcset="img/tab/category_overalls.png">
+                  <img class="catalog__item-img" src="img/mob/category_overalls.png" alt="Парень в рубашке">
+              </picture>
+              <p class="category__name">Overalls</p>
             </article>
-            <article class="catalog__item category__item">
-              <img class="catalog__item-img" src="img/mob/category_jackets.png" alt="Парень в рубашке" width="130" height="126">
+            <article class="catalog__item">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/category_jackets.png">
+                <source media="(min-width: 768px)" srcset="img/tab/category_jackets.png">
+                  <img class="catalog__item-img" src="img/mob/category_jackets.png" alt="Парень в рубашке">
+              </picture>
               <p class="category__name">Jackets</p>
             </article>
           </div>
