@@ -1,27 +1,115 @@
-.filter__closed-button {
+.filter__btn-opened {
   @include font-m;
-  margin: 0 auto;
-  width: 95%;
-
-  position: relative;
-
-  padding: 17px;
-  padding-right: 60%;
-
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 11px 17px;
   border: 2px solid $brand-color;
   cursor: pointer;
+  outline: none;
+}
 
-  &::after {
-    content: "";
+.filter__btn-opened .arrow {
+  right: 17px;
+}
+
+.filter__form {
+  position: relative;
+  padding: 0 15px 15px;
+
+  border: 2px solid $brand-color;
+  border-top: none;
+}
+
+.filter__heading {
+  @include font-m;
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  left: 50%;
+  top: 23px;
+
+  margin-left: -60px * 0.5;
+}
+
+.filter__list-fieldsets {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 157px;
+}
+
+.filter__btn-clear {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__wrapper {
+    position: relative;
+    padding-top: 20px;
+  }
+
+  .filter__btn-opened {
+    text-align: left;
+    margin: 0;
+    margin-left: auto;
+    padding: 17px 30px 10px 15px;
+    width: 206px;
+  }
+
+  .filter__btn-opened .arrow {
+    right: 19px;
+  }
+
+  .filter__heading {
+    display: none;
+  }
+
+  .filter__form {
     position: absolute;
-    width: 16px;
-    height: 10px;
-    top: 50%;
-    margin-top: -5px;
-    right: 20px;
-    background-image: url("../img/icons/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    padding-bottom: 0;
+    width: 206px;
+    right: 45px;
+    z-index: 1;
+    background-color: $background-color;
+  }
+
+  .filter__list-fieldsets {
+    margin-bottom: 50px;
+  }
+
+  .filter__btn-clear {
+    @include font-s;
+    display: block;
+    color: $brand-color;
+    background-color: $background-color;
+  }
+
+  .filter__btn-apply,
+  .filter__btn-clear {
+    padding: 27px 31px;
+    margin-left: -15px;
+    width: 202px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__wrapper {
+    padding-top: 36px;
+    padding-bottom: 15px;
+  }
+
+  .filter__btn-opened {
+    width: 245px;
+  }
+
+  .filter__form {
+    width: 245px;
+    right: 98px;
+  }
+
+  .filter__btn-apply,
+  .filter__btn-clear {
+    width: 241px;
   }
 }

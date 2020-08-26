@@ -12,3 +12,33 @@
   outline: none;
   cursor: pointer;
 }
+
+.actions__button-find {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.actions__button-basket {
+  width: 18px;
+  height: 16px;
+  background-image: url("../img/icons/basket.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (min-width: $tablet-width) {
+  .actions__button-find {
+    width: 18px;
+    height: 18px;
+  }
+
+  .actions__button-basket {
+    width: 20px;
+    height: 18px;
+  }
+}

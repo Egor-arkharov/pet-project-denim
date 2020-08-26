@@ -1,0 +1,141 @@
+.catalog-info__nav {
+  padding-top: 23px;
+  padding-bottom: 25px;
+}
+
+.catalog-info__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-info__item {
+  @include font-m;
+  font-weight: 400;
+  margin-right: 29px;
+
+  &:first-child {
+    display: none;
+  }
+
+  &::after {
+    content: "/";
+    position: relative;
+    color: $alt-color;
+    left: 13px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &--name {
+    color: $alt-color;
+  }
+}
+
+.catalog-info__link--name {
+  color: $alt-color;
+}
+
+.catalog-info__link--category {
+  color: $brand-color;
+}
+
+.catalog-info__title,
+.catalog-info__image-container {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-info__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background-color: $background-color;
+  }
+
+  .catalog-info__text {
+    margin-top: 52px;
+  }
+
+  .catalog-info__title,
+  .catalog-info__image-container {
+    display: block;
+  }
+
+  .catalog-info__title {
+    margin-top: 5px;
+  }
+
+  .catalog-info__season {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .catalog-info__item {
+    &:first-child {
+      display: block;
+    }
+  }
+
+  .catalog-info__image-container {
+    position: relative;
+    width: 294px;
+    margin-right: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icons/frame_mob.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      width: 109px;
+      height: 80px;
+    }
+
+    &::before {
+      top: 0;
+      right: -30px;
+    }
+
+    &::after {
+      bottom: 0;
+      left: -30px;
+      transform: scale(-1, 1);
+    }
+  }
+
+  .catalog-info__img {
+    z-index: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-info__wrapper {
+    justify-content: center;
+  }
+
+  .catalog-info__image-container {
+    margin: 0;
+    margin-left: 75px;
+
+    &::before,
+    &::after {
+      background-repeat: repeat;
+      height: 137px;
+    }
+  }
+
+  .catalog-info__text {
+    margin-left: -75px;
+  }
+}

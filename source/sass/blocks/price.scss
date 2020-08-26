@@ -1,0 +1,12 @@
+.price__btn {
+  @include font-s;
+  font-weight: 600;
+}
+
+.price__range {
+  margin: 0;
+  padding: 0;
+  width: 141px;
+  height: 2px;
+  background-color: $brand-color;
+}
