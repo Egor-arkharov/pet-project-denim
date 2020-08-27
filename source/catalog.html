@@ -66,18 +66,17 @@
         <form class="filter__form visually-hidden" method="post" action="https://echo.htmlacademy.ru/courses">
           <h3 class="filter__heading">Filters</h3>
 
-          <ul class="filter__list-settings settings">
-            <li><button class="settings__btn settings__btn-clear" type="reset">Clear all</button></li>
-            <li><button class="settings__btn settings__btn-close" type="button">Close</button></li>
-          </ul>
-
-          <div class="filter__list-fieldsets fieldsets">
+          <div class="filter__fieldsets fieldsets">
             <fieldset class="fieldsets__item price">
               <legend class="button-toggle">Price <span class="arrow"></span></legend>
               <div class="fieldsets__content visually-hidden">
-                <button class="price__btn">$ 40</button>
-                <div class="price__range"></div>
-                <button class="price__btn">$ 240</button>
+                <div class="price__range">
+                  <div class="price__scale">
+                    <div class="price__bar"></div>
+                  </div>
+                  <div class="price__toggle price__btn-min"><span class="price__cost price__cost--min">$ 40</span></div>
+                  <div class="price__toggle price__btn-max"><span class="price__cost price__cost--min">$ 240</span></div>
+                </div>
               </div>
             </fieldset>
 
@@ -135,12 +134,13 @@
           </div>
 
           <button class="filter__btn-apply button" type="submit">Apply (9 products)</button>
-          <button class="filter__btn-clear button" type="reset">Clear all</button>
+          <button class="filter__btn-clear" type="reset">Clear all</button>
+          <button class="filter__btn-close" type="button">Close</button>
         </form>
       </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog catalog-main">
       <div class="catalog__wrapper catalog__list center">
         <article class="catalog__item">
           <picture>
@@ -247,7 +247,9 @@
     <section class="catalog-bar">
       <div class="catalog-bar__wrapper center">
         <p class="catalog-bar__items">Showing 9 of 45 items</p>
-        <div class="catalog-bar__progress"></div>
+        <div class="catalog-bar__scale">
+          <div class="catalog-bar__bar"></div>
+        </div>
         <button class="catalog-bar__button button" type="button">Load more</button>
       </div>
     </section>
@@ -256,13 +258,13 @@
   <footer class="footer">
     <div class="footer__wrapper center">
       <nav class="footer__nav">
+        <a class="footer__logo" href="index.html"><img class="footer__logo" src="img/icons/logo_white.svg" alt="Логотип Nimes"></a>
         <ul class="footer__links">
-          <li class="footer__links-item"><a class="footer__links-logo" href="index.html"><img class="footer__logo" src="img/icons/logo_white.svg" alt="Логотип Nimes"></a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Sitemap </a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Shop</a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Service </a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Delivery</a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Contacts</a></li>
+          <li class="footer__links-item footer__links-item--shop"><a class="footer__links-name" href="">Shop</a></li>
+          <li class="footer__links-item footer__links-item--delivery"><a class="footer__links-name" href="">Delivery</a></li>
+          <li class="footer__links-item footer__links-item--sitemap"><a class="footer__links-name" href="">Sitemap </a></li>
+          <li class="footer__links-item footer__links-item--service"><a class="footer__links-name" href="">Service </a></li>
+          <li class="footer__links-item footer__links-item--contacts"><a class="footer__links-name" href="">Contacts</a></li>
         </ul>
       </nav>
       <div class="footer__social social">

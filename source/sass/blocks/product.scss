@@ -1,10 +1,10 @@
 .product__wrapper {
   padding: 0;
-  padding-top: 25px;
+  padding-top: 20px;
 }
 
 .product__img {
-  padding-bottom: 40px;
+  padding-bottom: 36px;
 }
 
 .product__img-big-container {
@@ -17,7 +17,7 @@
     position: absolute;
     width: 16px;
     height: 10px;
-    top: 50%;
+    top: 42%;
     background-image: url("../img/icons/arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -27,18 +27,18 @@
   }
 
   &::before {
-    left: 0;
+    left: 10px;
     transform: rotate(90deg);
   }
 
   &::after {
-    right: 0;
+    right: 10px;
     transform: rotate(-90deg);
   }
 }
 
 .product__spec {
-  padding: 30px 15px 39px;
+  padding: 34px 15px 39px;
   background-color: $background-color;
 }
 
@@ -52,19 +52,19 @@
 .product__desc {
   @include font-s;
 
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .product__price {
   @include font-m;
   font-weight: 600;
 
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 }
 
 .product__button {
   margin: 0;
-  padding: 23px 62px;
+  padding: 23px 58px;
 }
 
 .product__img-list {
@@ -94,7 +94,6 @@
   .product__img {
     width: 50%;
     padding: 0;
-    text-align: left;
   }
 
   .product__img-big-container {
@@ -105,11 +104,12 @@
   }
 
   .product__img-list {
-    margin: 0;
+    width: 324px;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .product__img-item {
@@ -117,6 +117,10 @@
     margin-top: 18px;
     padding: 0;
     display: block;
+  }
+
+  .product__price {
+    margin-bottom: 47px;
   }
 }
 
@@ -126,8 +130,6 @@
   }
 
   .product__img-big-container {
-    margin-left: 11px;
-
     &::before,
     &::after {
       display: block;
@@ -146,7 +148,7 @@
   }
 
   .product__img-list {
-    padding: 16px 105px 0 128px;
+    margin-top: 30px;
   }
 
   .product__img-item {
@@ -155,7 +157,7 @@
   }
 
   .product__spec {
-    padding: 61px 190px 0 85px;
+    padding: 61px 190px 20px 85px;
   }
 
   .product__name {

@@ -1,12 +1,52 @@
-.price__btn {
-  @include font-s;
-  font-weight: 600;
-}
-
 .price__range {
   margin: 0;
   padding: 0;
-  width: 141px;
+  width: 100%;
+
+  position: relative;
+}
+
+.price__scale {
   height: 2px;
+  background-color: $cloth-color-3;
+}
+
+.price__bar {
+  position: absolute;
+  left: 10%;
+  right: 20%;
+
+  height: 2px;
+
   background-color: $brand-color;
+}
+
+.price__toggle {
+  position: absolute;
+  top: -16px * 0.5;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $brand-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price__btn-min {
+  left: 10%;
+}
+
+.price__btn-max {
+  right: 20%;
+}
+
+.price__cost {
+  @include font-s;
+  font-weight: 600;
+  display: block;
+  width: max-content;
+  position: absolute;
+  top: 20px;
+  left: -10px;
 }

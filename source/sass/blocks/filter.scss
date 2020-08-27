@@ -15,7 +15,8 @@
 
 .filter__form {
   position: relative;
-  padding: 0 15px 15px;
+  margin: 0;
+  padding: 23px 15px 15px;
 
   border: 2px solid $brand-color;
   border-top: none;
@@ -23,23 +24,32 @@
 
 .filter__heading {
   @include font-m;
-  position: absolute;
-  width: 60px;
-  height: 25px;
-  left: 50%;
-  top: 23px;
-
-  margin-left: -60px * 0.5;
+  text-align: center;
 }
 
-.filter__list-fieldsets {
+.filter__fieldsets {
   display: flex;
   flex-direction: column;
   margin-bottom: 157px;
 }
 
+.filter__btn-clear,
+.filter__btn-close {
+  @include font-s;
+
+  position: absolute;
+  top: 25px;
+
+  outline: none;
+  cursor: pointer;
+}
+
 .filter__btn-clear {
-  display: none;
+  left: 15px;
+}
+
+.filter__btn-close {
+  right: 15px;
 }
 
 @media (min-width: $tablet-width) {
@@ -66,6 +76,7 @@
 
   .filter__form {
     position: absolute;
+    padding-top: 0;
     padding-bottom: 0;
     width: 206px;
     right: 45px;
@@ -73,13 +84,14 @@
     background-color: $background-color;
   }
 
-  .filter__list-fieldsets {
+  .filter__fieldsets {
     margin-bottom: 50px;
   }
 
   .filter__btn-clear {
     @include font-s;
     display: block;
+    position: static;
     color: $brand-color;
     background-color: $background-color;
   }
@@ -90,6 +102,10 @@
     margin-left: -15px;
     width: 202px;
     white-space: nowrap;
+  }
+
+  .filter__btn-close {
+    display: none;
   }
 }
 

@@ -1,26 +1,28 @@
 'use strict';
 
 (function () {
+  var PATH_TO_IMG_NUM =5;
+
   var Img = {
     IMG_1: {
-      SMALL: 'img/tab/overalls_1_small.png',
-      BIG: 'img/tab/overalls_1_big.png'
+      SMALL: 'img/tab/overalls_small_1.png',
+      BIG: 'img/tab/overalls_big_1.png'
     },
     IMG_2: {
-      SMALL: 'img/tab/overalls_2_small.png',
-      BIG: 'img/tab/overalls_2_big.png'
+      SMALL: 'img/tab/overalls_small_2.png',
+      BIG: 'img/tab/overalls_big_2.png'
     },
     IMG_3: {
-      SMALL: 'img/tab/overalls_3_small.png',
-      BIG: 'img/tab/overalls_3_big.png'
+      SMALL: 'img/tab/overalls_small_3.png',
+      BIG: 'img/tab/overalls_big_3.png'
     },
     IMG_4: {
-      SMALL: 'img/tab/overalls_4_small.png',
-      BIG: 'img/tab/overalls_4_big.png'
+      SMALL: 'img/tab/overalls_small_4.png',
+      BIG: 'img/tab/overalls_big_4.png'
     },
     IMG_5: {
-      SMALL: 'img/tab/overalls_5_small.png',
-      BIG: 'img/tab/overalls_5_big.png'
+      SMALL: 'img/tab/overalls_small_5.png',
+      BIG: 'img/tab/overalls_big_5.png'
     },
   };
 
@@ -40,9 +42,9 @@
     if (evt.target === smallImgList) {
       return
     } else {
-      var previousImg = bigImgMob.src.toString()[bigImgMob.src.length - 9];
+      var previousImg = bigImgMob.src.toString()[bigImgMob.src.length - PATH_TO_IMG_NUM];
       var newImgSmall = Img['IMG_' + previousImg].SMALL;
-      var currentImgNum = evt.target.src[evt.target.src.length - 11];
+      var currentImgNum = evt.target.src[evt.target.src.length - PATH_TO_IMG_NUM];
 
       if (evt.target.src.includes(Img['IMG_' + currentImgNum].SMALL)) {
         bigImgMob.src = Img['IMG_' + currentImgNum].BIG;
@@ -70,6 +72,6 @@
   };
 
   smallImgList.addEventListener('click', function (evt) { checkTarget(evt)});
-  featuresSizeList.addEventListener('click', function (evt) { changeFeatures('size__list-btn--active', featuresSizeList, evt)});
+  featuresSizeList.addEventListener('click', function (evt) { changeFeatures('size__name--active', featuresSizeList, evt)});
   featuresColorList.addEventListener('click', function (evt) { changeFeatures('color__name--active', featuresColorList, evt)});
 })();

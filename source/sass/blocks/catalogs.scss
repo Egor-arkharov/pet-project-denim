@@ -5,16 +5,20 @@
 
 .catalog-more .catalog__wrapper {
   padding-top: 54px;
-  padding-bottom: 61px;
+  padding-bottom: 59px;
 }
 
 .category .catalog__wrapper {
   padding-top: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 59px;
 }
 
 .category .catalog__item {
   margin-bottom: 7px;
+
+  &:last-child {
+    margin-top: -33px;
+  }
 }
 
 .category .category__name {
@@ -23,34 +27,70 @@
 
 @media (min-width: $tablet-width) {
   .bestsellers .catalog__wrapper {
-    padding-top: 97px;
+    padding-top: 94px;
     padding-bottom: 35px;
   }
 
   .category .catalog__wrapper {
-    padding-top: 93px;
-    padding-bottom: 37px;
+    padding-top: 90px;
+    padding-bottom: 50px;
   }
 
   .category .category__name {
     margin-top: 17px;
   }
 
+  .category .catalog__item {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-top: -59px;
+    }
+  }
+
   .catalog-more .catalog__wrapper {
     padding-top: 92px;
     padding-bottom: 49px;
+  }
+
+  .catalog-main .catalog__list {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 47px 30px;
+  }
+
+  .catalog-main .catalog__item {
+    margin: 0;
+  }
+
+  .catalog-main .catalog__item--big {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 4;
   }
 }
 
 @media (min-width: $desktop-width) {
   .bestsellers .catalog__wrapper {
-    padding-top: 125px;
+    padding-top: 120px;
     padding-bottom: 64px;
   }
 
   .category .catalog__wrapper {
     padding-top: 118px;
-    padding-bottom: 102px;
+    padding-bottom: 80px;
+  }
+
+  .category .catalog__item {
+    &:nth-child(3) {
+      order: 1;
+    }
+
+    &:last-child {
+      margin-top: 0;
+    }
   }
 
   .catalog-more .catalog__wrapper {
@@ -60,5 +100,18 @@
 
   .catalog-more .catalog__heading {
     margin-bottom: 62px;
+  }
+
+  .catalog-main .catalog__list {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 58px 67px;
+  }
+
+  .catalog-main .catalog__item--big {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 5;
   }
 }

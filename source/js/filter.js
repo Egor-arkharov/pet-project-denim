@@ -22,7 +22,9 @@
     if (evt.target.tagName !== 'LABEL' || (activeBtns.length === 1 && evt.target === activeBtns[0])) {
       return
     } else {
-      evt.target.classList.toggle(elClass)
+      console.log(evt.target);
+      evt.target.classList.toggle(elClass);
+      // evt.target.previousElementSibling.toggleAttribute('checked');
     }
   };
 
