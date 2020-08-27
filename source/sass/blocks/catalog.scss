@@ -31,6 +31,8 @@
 .catalog_more {
   @include font-l;
 
+  width: 70px;
+
   display: block;
   margin: 0 auto;
   margin-top: 8px;
@@ -63,7 +65,7 @@
 
   .catalog__category {
     @include font-m;
-    margin: 21px 0 9px;
+    margin: 15px 0 9px;
   }
 
   .catalog__price {
@@ -79,12 +81,12 @@
   .catalog__heading {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 66px;
+    margin-bottom: 62px;
   }
 
   .catalog_more {
     @include font-m;
-    top: 122px;
+    top: 127px;
     right: 98px;
   }
 }

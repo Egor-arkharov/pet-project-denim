@@ -43,35 +43,35 @@
         <div class="product__img">
           <div class="product__img-big-container">
             <picture>
-              <source media="(min-width: 1366px)" srcset="img/desk/overalls_5_big.png">
-              <source media="(min-width: 768px)" srcset="img/tab/overalls_5_big.png">
-                <img class="product__img-big" src="img/mob/overalls_5_big.png" alt="">
+              <source media="(min-width: 1366px)" srcset="img/desk/overalls_big_1.png">
+              <source media="(min-width: 768px)" srcset="img/tab/overalls_big_1.png">
+                <img class="product__img-big" src="img/mob/overalls_big_1.png" alt="">
             </picture>
           </div>
 
           <ul class="product__img-list">
             <li class="product__img-item">
               <picture>
-                <source media="(min-width: 1366px)" srcset="img/desk/overalls_1_small.png">
-                  <img class="product__img-small" src="img/tab/overalls_1_small.png" alt="">
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_2.png">
+                  <img class="product__img-small" src="img/tab/overalls_small_2.png" alt="">
               </picture>
             </li>
             <li class="product__img-item">
               <picture>
-                <source media="(min-width: 1366px)" srcset="img/desk/overalls_2_small.png">
-                  <img class="product__img-small" src="img/tab/overalls_2_small.png" alt="">
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_3.png">
+                  <img class="product__img-small" src="img/tab/overalls_small_3.png" alt="">
               </picture>
             </li>
             <li class="product__img-item">
               <picture>
-                <source media="(min-width: 1366px)" srcset="img/desk/overalls_3_small.png">
-                  <img class="product__img-small" src="img/tab/overalls_3_small.png" alt="">
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_4.png">
+                  <img class="product__img-small" src="img/tab/overalls_small_4.png" alt="">
               </picture>
             </li>
             <li class="product__img-item">
               <picture>
-                <source media="(min-width: 1366px)" srcset="img/desk/overalls_4_small.png">
-                  <img class="product__img-small" src="img/tab/overalls_4_small.png" alt="">
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_5.png">
+                  <img class="product__img-small" src="img/tab/overalls_small_5.png" alt="">
               </picture>
             </li>
           </ul>
@@ -87,15 +87,15 @@
               <legend class="features__name">Color</legend>
               <ul class="features__list color__list">
                 <li class="color__item">
-                  <input type="checkbox" id="lightgreen" name="color-type" value="lightgreen" class="visually-hidden" checked>
+                  <input type="radio" id="lightgreen" name="color-type" value="lightgreen" class="visually-hidden" checked>
                   <label for="lightgreen" class="color__name color__name--lightgreen color__name--active"></label>
                 </li>
                 <li class="color__item">
-                  <input type="checkbox" id="blue" name="color-type" value="blue" class="visually-hidden">
+                  <input type="radio" id="blue" name="color-type" value="blue" class="visually-hidden">
                   <label for="blue" class="color__name color__name--blue"></label>
                 </li>
                 <li class="color__item">
-                  <input type="checkbox" id="grey" name="color-type" value="grey" class="visually-hidden">
+                  <input type="radio" id="grey" name="color-type" value="grey" class="visually-hidden">
                   <label for="grey" class="color__name color__name--grey"></label>
                 </li>
               </ul>
@@ -105,23 +105,23 @@
               <legend class="features__name">Size</legend>
               <ul class="features__list size__list">
                 <li>
-                  <input type="checkbox" id="xs" name="size" value="xs" class="features-input visually-hidden">
+                  <input type="radio" id="xs" name="size-type" value="xs" class="visually-hidden">
                   <label for="xs" class="size__name">XS</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="s" name="size" value="s" class="features-input visually-hidden">
+                  <input type="radio" id="s" name="size-type" value="s" class="visually-hidden" checked>
                   <label for="s" class="size__name size__name--active">S</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="M" name="size" value="M" class="features-input visually-hidden">
+                  <input type="radio" id="M" name="size-type" value="M" class="visually-hidden">
                   <label for="M" class="size__name">M</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="L" name="size" value="L" class="features-input visually-hidden">
+                  <input type="radio" id="L" name="size-type" value="L" class="visually-hidden">
                   <label for="L" class="size__name">L</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="xl" name="size" value="xl" class="features-input visually-hidden">
+                  <input type="radio" id="xl" name="size-type" value="xl" class="visually-hidden">
                   <label for="xl" class="size__name">XL</label>
                 </li>
               </ul>
@@ -187,7 +187,8 @@
             </div>
           </article>
 
-        <button class="catalog_more" type="button">View all</button>
+          <button class="catalog_more" type="button">View all</button>
+        </div>
       </div>
     </section>
   </main>
@@ -195,13 +196,13 @@
   <footer class="footer">
     <div class="footer__wrapper center">
       <nav class="footer__nav">
+        <a class="footer__logo" href="index.html"><img class="footer__logo" src="img/icons/logo_white.svg" alt="Логотип Nimes"></a>
         <ul class="footer__links">
-          <li class="footer__links-item"><a class="footer__links-logo" href="index.html"><img class="footer__logo" src="img/icons/logo_white.svg" alt="Логотип Nimes"></a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Sitemap </a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Shop</a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Service </a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Delivery</a></li>
-          <li class="footer__links-item"><a class="footer__links-name" href="">Contacts</a></li>
+          <li class="footer__links-item footer__links-item--shop"><a class="footer__links-name" href="">Shop</a></li>
+          <li class="footer__links-item footer__links-item--delivery"><a class="footer__links-name" href="">Delivery</a></li>
+          <li class="footer__links-item footer__links-item--sitemap"><a class="footer__links-name" href="">Sitemap </a></li>
+          <li class="footer__links-item footer__links-item--service"><a class="footer__links-name" href="">Service </a></li>
+          <li class="footer__links-item footer__links-item--contacts"><a class="footer__links-name" href="">Contacts</a></li>
         </ul>
       </nav>
       <div class="footer__social social">

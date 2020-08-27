@@ -1,7 +1,12 @@
 .features {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
+}
+
+.features__list {
+  margin-top: 20px;
 }
 
 .button-toggle {
@@ -20,6 +25,12 @@
 
 .size__name--active {
   color: $brand-color;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    margin-bottom: 25px;
+  }
 }
 
 @media (min-width: $desktop-width) {
