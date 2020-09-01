@@ -1,3 +1,15 @@
 .size__list {
   display: flex;
 }
+
+.size__name {
+  @include font-m;
+  margin-right: 25px;
+  color: $alt-color;
+
+  cursor: pointer;
+}
+
+.size__name--active {
+  color: $brand-color;
+}

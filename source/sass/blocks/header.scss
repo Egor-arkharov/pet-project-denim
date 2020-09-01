@@ -17,7 +17,6 @@
 .header--nojs .header__wrapper,
 .header--opened .header__wrapper {
   position: relative;
-  padding-top: 18px;
   padding-bottom: 30px;
 
   background-color: $background-color;
@@ -72,6 +71,12 @@
   border: none;
   cursor: pointer;
   outline: none;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid $alt-color;
+    outline-offset: 3px;
+  }
 }
 
 .header__logo {
@@ -90,7 +95,7 @@
 }
 
 .header__categories-item {
-  margin-right: 25px;
+  margin-right: 20px;
 
   &:last-child {
     margin-right: 0;
@@ -101,6 +106,15 @@
   @include font-l;
 
   color: $brand-color;
+
+  &:hover {
+    font-weight: $font-weight-bold;
+  }
+
+  &:active {
+    outline: 1px solid $alt-color;
+    outline-offset: 2px;
+  }
 }
 
 .header__actions {
@@ -120,15 +134,15 @@
 
   .header--main .header__wrapper {
     padding-top: 65px;
-    padding-bottom: 0;
+    padding-bottom: 1px;
   }
 
   .header--main .header__logo {
     left: 0;
     top: 0;
+    margin: 0 auto;
     padding-top: 23px;
     padding-bottom: 20px;
-    margin: 0 auto;
   }
 
   .header__nav,

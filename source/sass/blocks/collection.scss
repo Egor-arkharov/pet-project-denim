@@ -4,10 +4,12 @@
 
 .collection__wrapper {
   padding: 0;
+  text-align: center;
 }
 
 .collection__call {
-  margin: 0 15px;
+  width: 290px;
+  margin: 0 auto;
   text-align: center;
   padding: 39px 0;
   background-color: $background-color;
@@ -49,16 +51,16 @@
   .collection__wrapper {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
 
     padding: 0 45px;
   }
 
   .collection__call {
+    width: 304px;
     text-align: left;
     margin: 20px 20px 20px 0;
-    padding: 46px 0px 0 50px;
-    flex-grow: 1;
+    padding: 46px 0 0 50px;
 
     &::before {
       width: 325px;
@@ -85,6 +87,7 @@
   }
 
   .collection__call {
+    width: 400px;
     margin: 28px 70px 38px 0;
     padding: 70px 64px 0 70px;
 

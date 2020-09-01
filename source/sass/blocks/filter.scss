@@ -1,5 +1,6 @@
 .filter__btn-opened {
   @include font-m;
+  font-weight: $font-weight-bold;
   display: block;
   width: 100%;
   text-align: left;
@@ -9,11 +10,17 @@
   outline: none;
 }
 
-.filter__btn-opened .arrow {
+.filter__btn-opened .filter__arrow {
   right: 17px;
 }
 
-.filter__form {
+.filter__heading {
+  @include font-m;
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+.filter__filters {
   position: relative;
   margin: 0;
   padding: 23px 15px 15px;
@@ -22,15 +29,37 @@
   border-top: none;
 }
 
-.filter__heading {
-  @include font-m;
-  text-align: center;
-}
-
-.filter__fieldsets {
+.filter__list {
+  margin: 0;
+  padding: 0;
+  border: none;
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
   margin-bottom: 157px;
+}
+
+.filter__list__item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter__content {
+  padding-bottom: 25px;
+}
+
+.filter__arrow {
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  top: 50%;
+  margin-top: -5px;
+  right: 5px;
+  background-image: url("../img/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .filter__btn-clear,
@@ -46,6 +75,11 @@
 
 .filter__btn-clear {
   left: 15px;
+
+  &:hover,
+  &:focus {
+    font-weight: $font-weight-bold;
+  }
 }
 
 .filter__btn-close {
@@ -66,7 +100,7 @@
     width: 206px;
   }
 
-  .filter__btn-opened .arrow {
+  .filter__btn-opened .filter__arrow {
     right: 19px;
   }
 
@@ -74,7 +108,7 @@
     display: none;
   }
 
-  .filter__form {
+  .filter__filters {
     position: absolute;
     padding-top: 0;
     padding-bottom: 0;
@@ -84,7 +118,7 @@
     background-color: $background-color;
   }
 
-  .filter__fieldsets {
+  .filter__list {
     margin-bottom: 50px;
   }
 
@@ -119,7 +153,7 @@
     width: 245px;
   }
 
-  .filter__form {
+  .filter__filters {
     width: 245px;
     right: 98px;
   }

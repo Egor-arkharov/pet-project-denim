@@ -18,6 +18,14 @@
   }
 }
 
+.social__link {
+  &:hover,
+  &:focus {
+    outline: 2px solid $body-color;
+    outline-offset: 2px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .social {
     margin-top: 22px;
@@ -26,5 +34,11 @@
   .social__list {
     justify-content: center;
     padding: 0;
+  }
+
+  .social__item {
+    &:first-child {
+      margin-left: 15px;
+    }
   }
 }

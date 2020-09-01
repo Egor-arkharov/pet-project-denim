@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,13 +10,13 @@
 <body>
   <header class="header header--nojs">
     <div class="header__wrapper center">
-      <button class="header__toggle-nav" type="button" aria-label="Открыть меню"></button>
+      <button class="header__toggle-nav" type="button" aria-label="Open main nav"></button>
 
       <nav class="header__nav">
         <ul class="header__categories">
-          <li class="header__categories-item"><a class="header__categories-link" href="index.html">Woman</a></li>
-          <li class="header__categories-item"><a class="header__categories-link" href="catalog.html">Man</a></li>
-          <li class="header__categories-item"><a class="header__categories-link" href="product.html">New</a></li>
+          <li class="header__categories-item"><a class="header__categories-link" href="index.html">Main</a></li>
+          <li class="header__categories-item"><a class="header__categories-link" href="catalog.html">Jackets</a></li>
+          <li class="header__categories-item"><a class="header__categories-link" href="product.html">Overalls</a></li>
         </ul>
       </nav>
 
@@ -61,15 +61,15 @@
 
     <section class="filter">
       <div class="filter__wrapper center">
-        <button class="filter__btn-opened button-toggle" type="button">Filter by <span class="arrow"></span></button>
+        <button class="filter__btn-opened button-toggle" type="button">Filter by <span class="filter__arrow"></span></button>
 
-        <form class="filter__form visually-hidden" method="post" action="https://echo.htmlacademy.ru/courses">
+        <div class="filter__filters visually-hidden">
           <h3 class="filter__heading">Filters</h3>
 
-          <div class="filter__fieldsets fieldsets">
-            <fieldset class="fieldsets__item price">
-              <legend class="button-toggle">Price <span class="arrow"></span></legend>
-              <div class="fieldsets__content visually-hidden">
+          <ul class="filter__list">
+            <li class="price">
+              <button class="button-toggle">Price <span class="filter__arrow"></span></button>
+              <div class="filter__content visually-hidden">
                 <div class="price__range">
                   <div class="price__scale">
                     <div class="price__bar"></div>
@@ -78,169 +78,61 @@
                   <div class="price__toggle price__btn-max"><span class="price__cost price__cost--min">$ 240</span></div>
                 </div>
               </div>
-            </fieldset>
+            </li>
 
-            <fieldset class="fieldsets__item color">
-              <legend class="button-toggle">Color <span class="arrow"></span></legend>
-              <ul class="fieldsets__content color__list visually-hidden">
-                <li class="color__item">
-                  <input type="checkbox" id="lightgreen" name="color-type" value="lightgreen" class="visually-hidden" checked>
-                  <label for="lightgreen" class="color__name color__name--lightgreen color__name--active"></label>
+            <li class="color">
+                <button class="button-toggle">Color <span class="filter__arrow"></span></button>
+                <ul class="filter__content color__list visually-hidden">
+                  <li class="color__item">
+                    <button class="color__name color__name--lightgreen color__name--active" aria-label="lightgreen"></button>
+                  </li>
+                  <li class="color__item">
+                    <button class="color__name color__name--blue" aria-label="blue"></button>
+                  </li>
+                  <li class="color__item">
+                    <button class="color__name color__name--grey" aria-label="grey"></button>
+                  </li>
+                  <li class="color__item">
+                    <button class="color__name color__name--black" aria-label="black"></button>
+                  </li>
+                  <li class="color__item">
+                    <button class="color__name color__name--lightgrey" aria-label="lightgrey"></button>
+                  </li>
+                  <li class="color__item">
+                    <button class="color__name color__name--lightblue" aria-label="lightblue"></button>
+                  </li>
+                </ul>
+            </li>
+
+            <li class="style">
+              <button class="button-toggle">Collection <span class="filter__arrow"></span></button>
+              <ul class="filter__content style__list visually-hidden">
+                <li>
+                  <button class="style__name style__name--active">Casual</button>
                 </li>
-                <li class="color__item">
-                  <input type="checkbox" id="blue" name="color-type" value="blue" class="visually-hidden">
-                  <label for="blue" class="color__name color__name--blue"></label>
+                <li>
+                  <button class="style__name">Petite</button>
                 </li>
-                <li class="color__item">
-                  <input type="checkbox" id="grey" name="color-type" value="grey" class="visually-hidden">
-                  <label for="grey" class="color__name color__name--grey"></label>
+                <li>
+                  <button class="style__name">Classic</button>
                 </li>
-                <li class="color__item">
-                  <input type="checkbox" id="black" name="color-type" value="black" class="visually-hidden">
-                  <label for="black" class="color__name color__name--black"></label>
-                </li>
-                <li class="color__item">
-                  <input type="checkbox" id="lightgrey" name="color-type" value="lightgrey" class="visually-hidden">
-                  <label for="lightgrey" class="color__name color__name--lightgrey"></label>
-                </li>
-                <li class="color__item">
-                  <input type="checkbox" id="lightblue" name="color-type" value="lightblue" class="visually-hidden">
-                  <label for="lightblue" class="color__name color__name--lightblue"></label>
+                <li>
+                  <button class="style__name">Soulluxe</button>
                 </li>
               </ul>
-            </fieldset>
+            </li>
+          </ul>
 
-            <fieldset class="fieldsets__item style">
-              <legend class="button-toggle">Collection <span class="arrow"></span></legend>
-              <ul class="fieldsets__content style__list visually-hidden">
-                <li>
-                  <input type="checkbox" id="casual" name="style-type" value="casual" class="visually-hidden" checked>
-                  <label for="casual" class="style__name style__name--active">Casual</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="petite" name="style-type" value="petite" class="visually-hidden">
-                  <label for="petite" class="style__name">Petite</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="classic" name="style-type" value="classic" class="visually-hidden">
-                  <label for="classic" class="style__name">Classic</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="soulluxe" name="style-type" value="soulluxe" class="visually-hidden">
-                  <label for="soulluxe" class="style__name">Soulluxe</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-
-          <button class="filter__btn-apply button" type="submit">Apply (9 products)</button>
-          <button class="filter__btn-clear" type="reset">Clear all</button>
+          <button class="filter__btn-apply button" type="button">Apply (9 products)</button>
+          <button class="filter__btn-clear" type="button">Clear all</button>
           <button class="filter__btn-close" type="button">Close</button>
-        </form>
+        </div>
       </div>
     </section>
 
     <section class="catalog catalog-main">
       <div class="catalog__wrapper catalog__list center">
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_40.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_40.png">
-              <img class="catalog__item-img" src="img/mob/jacket_40.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 40</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_70.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_70.png">
-              <img class="catalog__item-img" src="img/mob/jacket_70.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 70</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_60.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_60.png">
-              <img class="catalog__item-img" src="img/mob/jacket_60.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 60</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_50.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_50.png">
-              <img class="catalog__item-img" src="img/mob/jacket_50.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 50</p>
-          </div>
-        </article>
-        <article class="catalog__item catalog__item--big">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_160_big.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_160_big.png">
-              <img class="catalog__item-img" src="img/mob/jacket_160_big.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 160</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_40_2.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_40_2.png">
-              <img class="catalog__item-img" src="img/mob/jacket_40_2.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 40</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_110.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_110.png">
-              <img class="catalog__item-img" src="img/mob/jacket_110.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 110</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_35.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_35.png">
-              <img class="catalog__item-img" src="img/mob/jacket_35.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 35</p>
-          </div>
-        </article>
-        <article class="catalog__item">
-          <picture>
-            <source media="(min-width: 1366px)" srcset="img/desk/jacket_85.png">
-            <source media="(min-width: 768px)" srcset="img/tab/jacket_85.png">
-              <img class="catalog__item-img" src="img/mob/jacket_85.png" alt="">
-          </picture>
-          <div class="catalog__desc">
-            <p class="catalog__category">Jacket</p>
-            <p class="catalog__price">$ 85</p>
-          </div>
-        </article>
+        <!-- Карточки -->
       </div>
     </section>
 
@@ -258,27 +150,43 @@
   <footer class="footer">
     <div class="footer__wrapper center">
       <nav class="footer__nav">
-        <a class="footer__logo" href="index.html"><img class="footer__logo" src="img/icons/logo_white.svg" alt="Логотип Nimes"></a>
+        <a class="footer__logo" href="index.html"><img src="img/icons/logo_white.svg" alt="Logo Nimes"></a>
         <ul class="footer__links">
           <li class="footer__links-item footer__links-item--shop"><a class="footer__links-name" href="">Shop</a></li>
           <li class="footer__links-item footer__links-item--delivery"><a class="footer__links-name" href="">Delivery</a></li>
-          <li class="footer__links-item footer__links-item--sitemap"><a class="footer__links-name" href="">Sitemap </a></li>
-          <li class="footer__links-item footer__links-item--service"><a class="footer__links-name" href="">Service </a></li>
+          <li class="footer__links-item footer__links-item--sitemap"><a class="footer__links-name" href="">Sitemap</a></li>
+          <li class="footer__links-item footer__links-item--service"><a class="footer__links-name" href="">Service</a></li>
           <li class="footer__links-item footer__links-item--contacts"><a class="footer__links-name" href="">Contacts</a></li>
         </ul>
       </nav>
       <div class="footer__social social">
         <ul class="social__list">
-          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Фейсбук"></a></li>
-          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Инстаграм"></a></li>
-          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Пинтерест"></a></li>
-          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Твиттер"></a></li>
+          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Facebook"></a></li>
+          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Instagram"></a></li>
+          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Pinterest"></a></li>
+          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Twitter"></a></li>
         </ul>
       </div>
     </div>
   </footer>
 
+  <template id="jackets">
+    <article class="catalog__item">
+      <picture>
+        <source media="(min-width: 1366px)" srcset="img/desk/jacket_85.png">
+        <source media="(min-width: 768px)" srcset="img/tab/jacket_85.png">
+          <img class="catalog__item-img" src="img/mob/jacket_85.png" alt="">
+      </picture>
+      <div class="catalog__desc">
+        <p class="catalog__category">Jacket</p>
+        <p class="catalog__price">$ 85</p>
+      </div>
+    </article>
+  </template>
+
   <script src="js/header.js"></script>
   <script src="js/filter.js"></script>
+  <script src="js/mocks.js"></script>
+  <script src="js/articles-catalog.js"></script>
 </body>
 </html>

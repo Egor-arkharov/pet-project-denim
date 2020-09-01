@@ -1,77 +1,77 @@
 'use strict';
 
 (function () {
-  var PATH_TO_IMG_NUM =5;
+  let PATH_TO_IMG_NUM = 5;
+  let TAB_SIZE = 768;
+  let MEDIA_TAB_SIZE = '[media = "(min-width: 768px)"]';
+  let MEDIA_DESK_SIZE = '[media = "(min-width: 1366px)"]';
 
-  var Img = {
+  let slider = document.querySelector('.slider__list');
+  let bigImg = slider.querySelector('.slider__item--big');
+  let bigImgTab = bigImg.querySelector(MEDIA_TAB_SIZE);
+  let bigImgDesk = bigImg.querySelector(MEDIA_DESK_SIZE);
+
+  let OVERALLS = {
     IMG_1: {
-      SMALL: 'img/tab/overalls_small_1.png',
-      BIG: 'img/tab/overalls_big_1.png'
+      TAB_SMALL: 'img/tab/overalls_small_1.png',
+      TAB_BIG: 'img/tab/overalls_big_1.png',
+      DESK_SMALL: 'img/desk/overalls_small_1.png',
+      DESK_BIG: 'img/desk/overalls_big_1.png'
     },
     IMG_2: {
-      SMALL: 'img/tab/overalls_small_2.png',
-      BIG: 'img/tab/overalls_big_2.png'
+      TAB_SMALL: 'img/tab/overalls_small_2.png',
+      TAB_BIG: 'img/tab/overalls_big_2.png',
+      DESK_SMALL: 'img/desk/overalls_small_2.png',
+      DESK_BIG: 'img/desk/overalls_big_2.png'
     },
     IMG_3: {
-      SMALL: 'img/tab/overalls_small_3.png',
-      BIG: 'img/tab/overalls_big_3.png'
+      TAB_SMALL: 'img/tab/overalls_small_3.png',
+      TAB_BIG: 'img/tab/overalls_big_3.png',
+      DESK_SMALL: 'img/desk/overalls_small_3.png',
+      DESK_BIG: 'img/desk/overalls_big_3.png'
     },
     IMG_4: {
-      SMALL: 'img/tab/overalls_small_4.png',
-      BIG: 'img/tab/overalls_big_4.png'
+      TAB_SMALL: 'img/tab/overalls_small_4.png',
+      TAB_BIG: 'img/tab/overalls_big_4.png',
+      DESK_SMALL: 'img/desk/overalls_small_4.png',
+      DESK_BIG: 'img/desk/overalls_big_4.png'
     },
     IMG_5: {
-      SMALL: 'img/tab/overalls_small_5.png',
-      BIG: 'img/tab/overalls_big_5.png'
+      TAB_SMALL: 'img/tab/overalls_small_5.png',
+      TAB_BIG: 'img/tab/overalls_big_5.png',
+      DESK_SMALL: 'img/desk/overalls_small_5.png',
+      DESK_BIG: 'img/desk/overalls_big_5.png'
     },
   };
 
-  var bigImgContainer = document.querySelector('.product__img-big-container');
-  var container = document.querySelector('.product__img');
-  var bigImgMob = container.querySelector('.product__img-big');
-  var bigImgTab = bigImgContainer.querySelector('[media = "(min-width: 768px)"]');
-  var bigImgDesk = bigImgContainer.querySelector('[media = "(min-width: 1366px)"]');
-  var smallImgList = container.querySelector('.product__img-list');
-
-  var featuresColorList = document.querySelector('.color__list');
-  var featuresSizeList = document.querySelector('.size__list');
-
-  var checkTarget = function (evt) {
+  let changePhotos = function (evt) {
     evt.preventDefault();
 
-    if (evt.target === smallImgList) {
+    if (document.body.clientWidth < TAB_SIZE || evt.target.tagName !== 'IMG') {
       return
     } else {
-      var previousImg = bigImgMob.src.toString()[bigImgMob.src.length - PATH_TO_IMG_NUM];
-      var newImgSmall = Img['IMG_' + previousImg].SMALL;
-      var currentImgNum = evt.target.src[evt.target.src.length - PATH_TO_IMG_NUM];
+      let currentImgSrcset = evt.target.parentElement.querySelector(MEDIA_TAB_SIZE).srcset;
 
-      if (evt.target.src.includes(Img['IMG_' + currentImgNum].SMALL)) {
-        bigImgMob.src = Img['IMG_' + currentImgNum].BIG;
-        bigImgTab.srcset = Img['IMG_' + currentImgNum].BIG;
-        bigImgDesk.srcset = Img['IMG_' + currentImgNum].BIG
+      let currentImgNum = currentImgSrcset[currentImgSrcset.length - PATH_TO_IMG_NUM];
+      let currentBigImgNum = bigImgTab.srcset[bigImgTab.srcset.length - PATH_TO_IMG_NUM];
+      let currentAlt = evt.target.alt;
+
+      let newImgSmallTab = OVERALLS['IMG_' + currentBigImgNum].TAB_SMALL;
+      let newImgBigTab = OVERALLS['IMG_' + currentImgNum].TAB_BIG;
+      let newImgSmallDesk = OVERALLS['IMG_' + currentBigImgNum].DESK_SMALL;
+      let newImgBigDesk = OVERALLS['IMG_' + currentImgNum].DESK_BIG;
+
+      evt.target.parentElement.querySelector(MEDIA_TAB_SIZE).srcset = newImgSmallTab;
+      bigImgTab.srcset = newImgBigTab;
+
+      evt.target.parentElement.querySelector(MEDIA_DESK_SIZE).srcset = newImgSmallDesk;
+      bigImgDesk.srcset = newImgBigDesk;
+
+      evt.target.alt = bigImg.querySelector('.slider__img').alt;
+      bigImg.querySelector('.slider__img').alt = currentAlt;
     }
-
-    evt.target.src = newImgSmall;
-    evt.target.parentElement.querySelector('[media = "(min-width: 1366px)"]').srcset = newImgSmall;
-  }
   }
 
-  var changeFeatures = function (elClass, container, evt) {
-    evt.preventDefault();
+  slider.addEventListener('click', function (evt) { changePhotos(evt)});
 
-    if (evt.target.tagName !== 'LABEL') {
-      return
-    } else {
-
-    var prevActiveBtn = container.querySelector('.' + elClass);
-    prevActiveBtn.classList.remove(elClass);
-
-    evt.target.classList.add(elClass);
-    }
-  };
-
-  smallImgList.addEventListener('click', function (evt) { checkTarget(evt)});
-  featuresSizeList.addEventListener('click', function (evt) { changeFeatures('size__name--active', featuresSizeList, evt)});
-  featuresColorList.addEventListener('click', function (evt) { changeFeatures('color__name--active', featuresColorList, evt)});
 })();

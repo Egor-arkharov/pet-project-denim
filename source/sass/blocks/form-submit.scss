@@ -1,0 +1,25 @@
+.success,
+.error {
+  @include font-m;
+  margin-top: 18px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid $brand-color;
+}
+
+.success__message,
+.error__message {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.error__message {
+  color: red;
+}
+
+.success__button,
+.error__button {
+  @include font-m;
+  margin: 0 auto;
+  padding: 5px 20px;
+}

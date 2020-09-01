@@ -5,7 +5,8 @@
 
 .catalog__heading {
   @include font-xl;
-  font-weight: 600;
+  font-weight: $font-weight-bold;
+
   margin-bottom: 34px;
 }
 
@@ -28,18 +29,36 @@
   @include font-s;
 }
 
-.catalog_more {
+.catalog__more {
   @include font-l;
+
+  display: block;
 
   width: 70px;
 
-  display: block;
   margin: 0 auto;
   margin-top: 8px;
   padding: 0;
+
   border-bottom: 2px solid $brand-color;
   cursor: pointer;
   outline: none;
+
+  &:hover,
+  &:focus {
+    position: relative;
+    border-color: $body-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      top: -2px;
+      left: -7.5px;
+      border: 2px solid $brand-color;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -55,12 +74,28 @@
     line-height: 33px;
   }
 
-  .catalog_more {
+  .catalog__more {
     position: absolute;
 
     top: 91px;
     right: 45px;
     width: 80px;
+
+    &:hover,
+    &:focus {
+      position: absolute;
+      border-color: $body-color;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        top: -2px;
+        left: -7.5px;
+        border: 2px solid $brand-color;
+      }
+    }
   }
 
   .catalog__category {
@@ -84,7 +119,7 @@
     margin-bottom: 62px;
   }
 
-  .catalog_more {
+  .catalog__more {
     @include font-m;
     top: 127px;
     right: 98px;

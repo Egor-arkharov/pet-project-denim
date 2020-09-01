@@ -9,33 +9,8 @@
   margin-top: 20px;
 }
 
-.button-toggle {
-  @include font-l;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.size__name {
-  @include font-m;
-  margin-right: 25px;
-  color: $alt-color;
-
-  cursor: pointer;
-}
-
-.size__name--active {
-  color: $brand-color;
-}
-
 @media (min-width: $tablet-width) {
   .features {
-    margin-bottom: 25px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .button-toggle {
-    @include font-m;
     margin-bottom: 25px;
   }
 }

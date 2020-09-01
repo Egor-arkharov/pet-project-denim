@@ -43,10 +43,14 @@
 
 .price__cost {
   @include font-s;
-  font-weight: 600;
+  font-weight: $font-weight-bold;
   display: block;
   width: max-content;
   position: absolute;
   top: 20px;
   left: -10px;
+}
+
+.price .filter__content {
+  padding-bottom: 30px;
 }
