@@ -108,7 +108,7 @@
     }
 
     &::after {
-      bottom: 0;
+      bottom: 4px;
       left: -30px;
       transform: scale(-1, 1);
     }
@@ -130,8 +130,15 @@
 
     &::before,
     &::after {
-      background-repeat: repeat;
       height: 137px;
+    }
+
+    &::before {
+      top: -29px;
+    }
+
+    &::after {
+      bottom: -24px;
     }
   }
 

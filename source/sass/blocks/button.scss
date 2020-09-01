@@ -1,3 +1,67 @@
 .button {
-  @include button;
+  @include font-l;
+  font-weight: $font-weight-bold;
+
+  display: block;
+
+  margin: 0 auto;
+  padding: 24px 27px;
+
+  text-decoration: none;
+  text-align: center;
+
+  background-color: $brand-color;
+  color: $body-color;
+
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $body-color;
+    color: $brand-color;
+  }
+
+  &:focus {
+    outline: 2px solid $alt-color;
+  }
+
+  &:active {
+    outline-color: $brand-color;
+  }
+}
+
+.button-toggle {
+  @include font-l;
+  font-weight: $font-weight-bold;
+
+  position: relative;
+  width: 100%;
+
+  margin-bottom: 10px;
+  padding: 18px 0;
+
+  color: $brand-color;
+  text-align: left;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: 1px solid $alt-color;
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+
+@media (min-width: $desktop-width) {
+  .button-toggle {
+    @include font-m;
+    padding: 18px 0;
+    margin-bottom: 25px;
+  }
 }

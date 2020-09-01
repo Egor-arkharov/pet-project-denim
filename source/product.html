@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,13 +10,13 @@
 <body>
   <header class="header header--nojs">
     <div class="header__wrapper center">
-      <button class="header__toggle-nav" type="button" aria-label="Открыть меню"></button>
+      <button class="header__toggle-nav" type="button" aria-label="Open main nav"></button>
 
       <nav class="header__nav">
         <ul class="header__categories">
-          <li class="header__categories-item"><a class="header__categories-link" href="index.html">Woman</a></li>
-          <li class="header__categories-item"><a class="header__categories-link" href="catalog.html">Man</a></li>
-          <li class="header__categories-item"><a class="header__categories-link" href="product.html">New</a></li>
+          <li class="header__categories-item"><a class="header__categories-link" href="index.html">Main</a></li>
+          <li class="header__categories-item"><a class="header__categories-link" href="catalog.html">Jackets</a></li>
+          <li class="header__categories-item"><a class="header__categories-link" href="product.html">Overalls</a></li>
         </ul>
       </nav>
 
@@ -40,38 +40,41 @@
   <main>
     <section class="product">
       <div class="product__wrapper center">
-        <div class="product__img">
-          <div class="product__img-big-container">
-            <picture>
-              <source media="(min-width: 1366px)" srcset="img/desk/overalls_big_1.png">
-              <source media="(min-width: 768px)" srcset="img/tab/overalls_big_1.png">
-                <img class="product__img-big" src="img/mob/overalls_big_1.png" alt="">
-            </picture>
-          </div>
-
-          <ul class="product__img-list">
-            <li class="product__img-item">
+        <div class="product__slider slider" tabindex="0">
+          <ul class="slider__list">
+            <li class="slider__item slider__item--big">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="img/desk/overalls_big_1.png">
+                <source media="(min-width: 768px)" srcset="img/tab/overalls_big_1.png">
+                  <img class="slider__img" src="img/tab/overalls_big_1.png" alt="Woman with overalls in front of the building">
+              </picture>
+            </li>
+            <li class="slider__item">
               <picture>
                 <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_2.png">
-                  <img class="product__img-small" src="img/tab/overalls_small_2.png" alt="">
+                <source media="(min-width: 768px)" srcset="img/tab/overalls_small_2.png">
+                  <img class="slider__img" src="img/tab/overalls_big_2.png" alt="Woman with overalls in parking">
               </picture>
             </li>
-            <li class="product__img-item">
+            <li class="slider__item">
               <picture>
                 <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_3.png">
-                  <img class="product__img-small" src="img/tab/overalls_small_3.png" alt="">
+                <source media="(min-width: 768px)" srcset="img/tab/overalls_small_3.png">
+                  <img class="slider__img" src="img/tab/overalls_big_3.png" alt="Woman with overalls in front of the building side view">
               </picture>
             </li>
-            <li class="product__img-item">
+            <li class="slider__item">
               <picture>
                 <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_4.png">
-                  <img class="product__img-small" src="img/tab/overalls_small_4.png" alt="">
+                <source media="(min-width: 768px)" srcset="img/tab/overalls_small_4.png">
+                  <img class="slider__img" src="img/tab/overalls_big_4.png" alt="Woman with overalls sitting on the sidewalk looking up">
               </picture>
             </li>
-            <li class="product__img-item">
+            <li class="slider__item">
               <picture>
                 <source media="(min-width: 1366px)" srcset="img/desk/overalls_small_5.png">
-                  <img class="product__img-small" src="img/tab/overalls_small_5.png" alt="">
+                <source media="(min-width: 768px)" srcset="img/tab/overalls_small_5.png">
+                  <img class="slider__img" src="img/tab/overalls_big_5.png" alt="Woman with overalls sitting on the sidewalk">
               </picture>
             </li>
           </ul>
@@ -88,15 +91,15 @@
               <ul class="features__list color__list">
                 <li class="color__item">
                   <input type="radio" id="lightgreen" name="color-type" value="lightgreen" class="visually-hidden" checked>
-                  <label for="lightgreen" class="color__name color__name--lightgreen color__name--active"></label>
+                  <label for="lightgreen" class="color__name color__name--lightgreen color__name--active" tabindex="0"></label>
                 </li>
                 <li class="color__item">
                   <input type="radio" id="blue" name="color-type" value="blue" class="visually-hidden">
-                  <label for="blue" class="color__name color__name--blue"></label>
+                  <label for="blue" class="color__name color__name--blue" tabindex="0"></label>
                 </li>
                 <li class="color__item">
-                  <input type="radio" id="grey" name="color-type" value="grey" class="visually-hidden">
-                  <label for="grey" class="color__name color__name--grey"></label>
+                  <input type="radio" id="grey" name="color-type" value="grey" class="visually-hidden" >
+                  <label for="grey" class="color__name color__name--grey" tabindex="0"></label>
                 </li>
               </ul>
             </fieldset>
@@ -105,24 +108,24 @@
               <legend class="features__name">Size</legend>
               <ul class="features__list size__list">
                 <li>
-                  <input type="radio" id="xs" name="size-type" value="xs" class="visually-hidden">
-                  <label for="xs" class="size__name">XS</label>
+                  <input type="radio" id="xs" name="size-type" value="XS" class="visually-hidden">
+                  <label for="xs" class="size__name" tabindex="0">XS</label>
                 </li>
                 <li>
-                  <input type="radio" id="s" name="size-type" value="s" class="visually-hidden" checked>
-                  <label for="s" class="size__name size__name--active">S</label>
+                  <input type="radio" id="s" name="size-type" value="S" class="visually-hidden" checked>
+                  <label for="s" class="size__name size__name--active" tabindex="0">S</label>
                 </li>
                 <li>
-                  <input type="radio" id="M" name="size-type" value="M" class="visually-hidden">
-                  <label for="M" class="size__name">M</label>
+                  <input type="radio" id="m" name="size-type" value="M" class="visually-hidden">
+                  <label for="m" class="size__name" tabindex="0">M</label>
                 </li>
                 <li>
-                  <input type="radio" id="L" name="size-type" value="L" class="visually-hidden">
-                  <label for="L" class="size__name">L</label>
+                  <input type="radio" id="l" name="size-type" value="L" class="visually-hidden">
+                  <label for="l" class="size__name" tabindex="0">L</label>
                 </li>
                 <li>
                   <input type="radio" id="xl" name="size-type" value="xl" class="visually-hidden">
-                  <label for="xl" class="size__name">XL</label>
+                  <label for="xl" class="size__name" tabindex="0">XL</label>
                 </li>
               </ul>
             </fieldset>
@@ -131,9 +134,6 @@
 
             <button class="product__button button" type="submit">Add to cart</button>
           </form>
-
-
-
         </div>
       </div>
     </section>
@@ -142,53 +142,9 @@
       <div class="catalog__wrapper center">
         <h2 class="catalog__heading">You may also like</h2>
         <div class="catalog__list">
-          <article class="catalog__item">
-            <picture>
-              <source media="(min-width: 1366px)" srcset="img/desk/bestsellers_overalls_140.png">
-              <source media="(min-width: 768px)" srcset="img/tab/bestsellers_overalls_140.png">
-                <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="Жакет за 120 бачинских">
-            </picture>
-            <div class="catalog__desc">
-              <p class="catalog__category">Overalls</p>
-              <p class="catalog__price">$ 140</p>
-            </div>
-          </article>
-          <article class="catalog__item">
-            <picture>
-              <source media="(min-width: 1366px)" srcset="img/desk/overalls_big_110.png">
-              <source media="(min-width: 768px)" srcset="img/tab/overalls_big_110.png">
-                <img class="catalog__item-img" src="img/mob/overalls_110.png" alt="Жакет за 120 бачинских">
-            </picture>
-            <div class="catalog__desc">
-              <p class="catalog__category">Overalls</p>
-              <p class="catalog__price">$ 110</p>
-            </div>
-          </article>
-          <article class="catalog__item">
-            <picture>
-              <source media="(min-width: 1366px)" srcset="img/desk/jacket_big_70.png">
-              <source media="(min-width: 768px)" srcset="img/tab/jacket_big_70.png">
-                <img class="catalog__item-img" src="img/mob/jacket_70.png" alt="Жакет за 120 бачинских">
-            </picture>
-            <div class="catalog__desc">
-              <p class="catalog__category">Jacket</p>
-              <p class="catalog__price">$ 70</p>
-            </div>
-          </article>
-          <article class="catalog__item">
-            <picture>
-              <source media="(min-width: 1366px)" srcset="img/desk/jacket_big_60.png">
-              <source media="(min-width: 768px)" srcset="img/tab/jacket_big_60.png">
-                <img class="catalog__item-img" src="img/mob/jacket_60.png" alt="Жакет за 120 бачинских">
-            </picture>
-            <div class="catalog__desc">
-              <p class="catalog__category">Jacket</p>
-              <p class="catalog__price">$ 60</p>
-            </div>
-          </article>
-
-          <button class="catalog_more" type="button">View all</button>
+          <!-- Карточки -->
         </div>
+        <button class="catalog__more" type="button">View all</button>
       </div>
     </section>
   </main>
@@ -196,27 +152,60 @@
   <footer class="footer">
     <div class="footer__wrapper center">
       <nav class="footer__nav">
-        <a class="footer__logo" href="index.html"><img class="footer__logo" src="img/icons/logo_white.svg" alt="Логотип Nimes"></a>
+        <a class="footer__logo" href="index.html"><img src="img/icons/logo_white.svg" alt="Logo Nimes"></a>
         <ul class="footer__links">
           <li class="footer__links-item footer__links-item--shop"><a class="footer__links-name" href="">Shop</a></li>
           <li class="footer__links-item footer__links-item--delivery"><a class="footer__links-name" href="">Delivery</a></li>
-          <li class="footer__links-item footer__links-item--sitemap"><a class="footer__links-name" href="">Sitemap </a></li>
-          <li class="footer__links-item footer__links-item--service"><a class="footer__links-name" href="">Service </a></li>
+          <li class="footer__links-item footer__links-item--sitemap"><a class="footer__links-name" href="">Sitemap</a></li>
+          <li class="footer__links-item footer__links-item--service"><a class="footer__links-name" href="">Service</a></li>
           <li class="footer__links-item footer__links-item--contacts"><a class="footer__links-name" href="">Contacts</a></li>
         </ul>
       </nav>
       <div class="footer__social social">
         <ul class="social__list">
-          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Фейсбук"></a></li>
-          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Инстаграм"></a></li>
-          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Пинтерест"></a></li>
-          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Твиттер"></a></li>
+          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Facebook"></a></li>
+          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Instagram"></a></li>
+          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Pinterest"></a></li>
+          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Twitter"></a></li>
         </ul>
       </div>
     </div>
   </footer>
 
+  <template id="catalog-more">
+    <article class="catalog__item">
+      <picture>
+        <source media="(min-width: 1366px)" srcset="img/desk/bestsellers_overalls_140.png">
+        <source media="(min-width: 768px)" srcset="img/tab/bestsellers_overalls_140.png">
+          <img class="catalog__item-img" src="img/mob/bestsellers_overalls_140.png" alt="alt">
+      </picture>
+      <div class="catalog__desc">
+        <p class="catalog__category">Overalls</p>
+        <p class="catalog__price">$ 140</p>
+      </div>
+    </article>
+  </template>
+
+  <template id="success">
+    <div class="success">
+      <p class="success__message">Added!</p>
+      <button type="reset" class="success__button button">Close</button>
+    </div>
+  </template>
+
+  <template id="error">
+    <div class="error">
+      <p class="error__message">Error. Try again!</p>
+      <button type="reset" class="error__button button">Close</button>
+    </div>
+  </template>
+
   <script src="js/header.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/mocks.js"></script>
+  <script src="js/card.js"></script>
+  <script src="js/articles-product.js"></script>
+  <script src="js/backend.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

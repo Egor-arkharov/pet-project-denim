@@ -5,19 +5,23 @@
 }
 
 .info__image-container {
-  margin: 0;
-  padding: 0;
   width: 202px;
   min-height: 249px;
+
+  margin: 0;
+  margin-left: -202px * 0.5;
+  padding: 0;
+
   position: relative;
   left: 50%;
-  margin-left: -202px * 0.5;
+
   z-index: 1;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
+
     background-image: url("../img/icons/frame_mob.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -57,6 +61,12 @@
 .info__scroll-down {
   outline: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $brand-color;
+    outline-offset: 2px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -76,10 +86,11 @@
   .info__image-container {
     position: absolute;
 
+    width: 264px;
+
     margin: 0;
     margin-left: 45px;
     padding: 0;
-    width: 264px;
 
     right: 75px;
 
@@ -103,6 +114,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     width: 100%;
     margin-top: 35px;
   }
@@ -114,11 +126,11 @@
   }
 
   .info__scroll-down {
-    margin: 0;
-    padding: 0;
-
     width: 10px;
     height: 27px;
+
+    margin: 0;
+    padding: 0;
 
     background-image: url("../img/icons/arrowhead.svg");
     background-repeat: no-repeat;
@@ -131,6 +143,10 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      font-weight: $font-weight-bold;
     }
   }
 }
@@ -168,19 +184,20 @@
   }
 
   .info__slogan {
-    z-index: 1;
     margin: 0;
     margin-top: 138px;
 
     text-align: left;
+    z-index: 1;
   }
 
   .info__social {
+    margin: 0;
+    padding: 0 51px 0 97px;
+
     position: absolute;
     bottom: 50px;
     left: 0;
-    margin: 0;
-    padding: 0 51px 0 97px;
   }
 
   .info__social-list {
