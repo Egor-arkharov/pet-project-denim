@@ -4,13 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <title>Main - Denim</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <meta name="description" content="The official website of Nimes clothes.">
+  <title>Main - Nimes</title>
+  <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="./fonts/work-sans-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/work-sans-medium.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="./fonts/anton-regular.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/icons/sprite.svg"></include>
+  </div>
+
   <header class="header header--nojs header--main">
     <div class="header__wrapper center">
       <button class="header__toggle-nav" type="button" aria-label="Open main nav"></button>
@@ -31,10 +36,10 @@
 
       <ul class="header__actions actions">
         <li class="actions__item">
-          <button class="actions__button actions__button-find"></button>
+          <button class="actions__button actions__button-find" aria-label="Find"></button>
         </li>
         <li class="actions__item">
-          <button class="actions__button actions__button-basket"></button>
+          <button class="actions__button actions__button-basket" aria-label="Basket"></button>
         </li>
       </ul>
     </div>
@@ -42,15 +47,20 @@
 
 
   <main class="main">
-    <h1 class="visually-hidden">DENIM - the quality you deserve</h1>
+    <h1 class="visually-hidden">Nimes - the quality you deserve</h1>
 
     <section class="info">
+      <h2 class="visually-hidden">Check new Nimes collection</h2>
       <div class="info__wrapper center">
           <div class="info__image-container">
             <picture>
-              <source media="(min-width: 1366px)" srcset="img/desk/main_top_img.png">
-              <source media="(min-width: 768px)" srcset="img/tab/main_top_img.png">
-                <img class="info__image" src="img/mob/main_top_img.png" alt="Woman with overalls on black background">
+              <source type="image/webp" media="(min-width: 1366px)" srcset="img/desk/main_top_img@1x.webp 1x, img/desk/main_top_img@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/tab/main_top_img@1x.webp 1x, img/tab/main_top_img@2x.webp 2x">
+              <source type="image/webp" srcset="img/mob/main_top_img@1x.webp 1x, img/mob/main_top_img@2x.webp 2x">
+
+              <source media="(min-width: 1366px)" srcset="img/desk/main_top_img@1x.png 1x, img/desk/main_top_img@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/tab/main_top_img@1x.png 1x, img/tab/main_top_img@2x.png 2x">
+                <img class="info__image" src="img/mob/main_top_img@1x.png" srcset="img/mob/main_top_img@2x.png" alt="Woman with overalls on black background">
             </picture>
           </div>
 
@@ -61,7 +71,7 @@
         </div>
 
         <div class="info__social">
-          <a class="info__scroll-down" href="#bestsellers-catalog"></a>
+          <a class="info__scroll-down" href="#bestsellers-catalog" aria-label="To bestsellers"></a>
 
           <ul class="info__social-list">
             <li class="info__social-item"><a href="#" class="info__social-link">Instagram</a></li>
@@ -85,15 +95,19 @@
     <section class="collection">
       <div class="collection__wrapper center">
         <div class="collection__call">
-          <p class="collection__name">Street fashion collection</p>
+          <h2 class="collection__name">Street fashion collection</h2>
           <p class="collection__season">Fall 2019</p>
           <button class="collection__button button" type="button">Shop now</button>
         </div>
 
         <picture>
-          <source media="(min-width: 1366px)" srcset="img/desk/main_group_img.png">
-          <source media="(min-width: 768px)" srcset="img/tab/main_group_img.png">
-            <img class="collection__img" src="img/mob/main_group_img.png" alt="Man and woman near the wall in Denim clothes">
+          <source type="image/webp" media="(min-width: 1366px)" srcset="img/desk/main_group_img@1x.webp 1x, img/desk/main_group_img@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/tab/main_group_img@1x.webp 1x, img/tab/main_group_img@2x.webp 2x">
+          <source type="image/webp" srcset="img/mob/main_group_img@1x.webp 1x, img/mob/main_group_img@2x.webp 2x">
+
+          <source media="(min-width: 1366px)" srcset="img/desk/main_group_img@1x.png 1x, img/desk/main_group_img@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/tab/main_group_img@1x.png 1x, img/tab/main_group_img@2x.png 2x">
+            <img class="collection__img" src="img/mob/main_group_img@1x.png" srcset="img/mob/main_group_img@2x.png 2x" alt="Man and woman near the wall in Denim clothes">
         </picture>
 
 
@@ -126,10 +140,26 @@
       </nav>
       <div class="footer__social social">
         <ul class="social__list">
-          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Facebook"></a></li>
-          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Instagram"></a></li>
-          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Pinterest"></a></li>
-          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Twitter"></a></li>
+          <li class="social__item social__item--fb">
+            <a class="social__link" href="" aria-label="Facebook">
+              <svg class="social__link-img" width="11"><use xlink:href="#sm_fb"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--inst">
+            <a class="social__link" href="" aria-label="Instagram">
+              <svg class="social__link-img" width="20"><use xlink:href="#sm_inst"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--pint">
+            <a class="social__link" href="" aria-label="Pinterest">
+              <svg class="social__link-img" width="21"><use xlink:href="#sm_pint"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--tw">
+            <a class="social__link" href="" aria-label="Twitter">
+              <svg class="social__link-img" width="22"><use xlink:href="#sm_tw"></use></svg>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

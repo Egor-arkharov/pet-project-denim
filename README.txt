@@ -1,4 +1,4 @@
-Пет-проект Архарова Егора.
+Пет-проект Архарова Егора по макету HTML Academy.
 
-GIT: https://github.com/Egor-arkharov
 FB: https://www.facebook.com/egor.arkharov/
+TG: @EgorArkharov

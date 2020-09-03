@@ -84,6 +84,11 @@
 
 .filter__btn-close {
   right: 15px;
+
+  &:hover,
+  &:focus {
+    font-weight: $font-weight-bold;
+  }
 }
 
 @media (min-width: $tablet-width) {

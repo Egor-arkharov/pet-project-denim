@@ -1,8 +1,8 @@
 'use strict';
 
 (function () {
-  var header = document.querySelector('.header');
-  var toggle = header.querySelector('.header__toggle-nav');
+  let header = document.querySelector('.header');
+  let toggle = header.querySelector('.header__toggle-nav');
 
   header.classList.remove('header--nojs');
 

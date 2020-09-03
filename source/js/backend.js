@@ -2,24 +2,24 @@
 
 (function () {
 
-  var Url = {
+  let Url = {
     SAVE: 'https://echo.htmlacademy.ru/courses'
   };
 
-  var StatusCode = {
+  let StatusCode = {
     OK: 200
   };
 
-  var handleRequest = function (xhr, onLoad, onError) {
+  let handleRequest = function (xhr, onLoad, onError) {
     xhr.responseType = 'json';
 
     xhr.addEventListener('load', function () {
       if (xhr.status === StatusCode.OK) {
-        var loadResponse = onLoad(xhr.response);
+        let loadResponse = onLoad(xhr.response);
         return loadResponse;
       }
 
-      var errorResponse = onError('Статус ответа: ' + xhr.status + ' ' + xhr.statusText);
+      let errorResponse = onError('Статус ответа: ' + xhr.status + ' ' + xhr.statusText);
       return errorResponse;
     });
 
@@ -28,8 +28,8 @@
     });
   };
 
-  var saveData = function (onLoad, onError, data) {
-    var xhr = new XMLHttpRequest();
+  let saveData = function (onLoad, onError, data) {
+    let xhr = new XMLHttpRequest();
     handleRequest(xhr, onLoad, onError);
     xhr.open('POST', Url.SAVE);
     xhr.send(data);

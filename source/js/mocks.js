@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var BESTSELLERS = [
+  let BESTSELLERS = [
     {
       category: 'Jacket',
       price: 120,
@@ -44,7 +44,7 @@
     }
   ];
 
-  var BY_CATEGORY = [
+  let BY_CATEGORY = [
     {
       category: 'Jeans',
       photo: {
@@ -83,7 +83,187 @@
     }
   ]
 
-  var JACKETS = [
+  let JACKETS = [
+    {
+      price: 40,
+      photo: {
+        mob: 'img/mob/jacket_40.png',
+        tab: 'img/tab/jacket_40.png',
+        desk: 'img/desk/jacket_40.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 70,
+      photo: {
+        mob: 'img/mob/jacket_70.png',
+        tab: 'img/tab/jacket_70.png',
+        desk: 'img/desk/jacket_70.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 60,
+      photo: {
+        mob: 'img/mob/jacket_60.png',
+        tab: 'img/tab/jacket_60.png',
+        desk: 'img/desk/jacket_60.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 40,
+      photo: {
+        mob: 'img/mob/jacket_50.png',
+        tab: 'img/tab/jacket_50.png',
+        desk: 'img/desk/jacket_50.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 160,
+      photo: {
+        mob: 'img/mob/jacket_160_big.png',
+        tab: 'img/tab/jacket_160_big.png',
+        desk: 'img/desk/jacket_160_big.png'
+      },
+      alt: 'alt',
+      isPhotoBig: true
+    },
+    {
+      price: 40,
+      photo: {
+        mob: 'img/mob/jacket_40_2.png',
+        tab: 'img/tab/jacket_40_2.png',
+        desk: 'img/desk/jacket_40_2.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 110,
+      photo: {
+        mob: 'img/mob/jacket_110.png',
+        tab: 'img/tab/jacket_110.png',
+        desk: 'img/desk/jacket_110.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 35,
+      photo: {
+        mob: 'img/mob/jacket_35.png',
+        tab: 'img/tab/jacket_35.png',
+        desk: 'img/desk/jacket_35.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 85,
+      photo: {
+        mob: 'img/mob/jacket_85.png',
+        tab: 'img/tab/jacket_85.png',
+        desk: 'img/desk/jacket_85.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 40,
+      photo: {
+        mob: 'img/mob/jacket_40.png',
+        tab: 'img/tab/jacket_40.png',
+        desk: 'img/desk/jacket_40.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 70,
+      photo: {
+        mob: 'img/mob/jacket_70.png',
+        tab: 'img/tab/jacket_70.png',
+        desk: 'img/desk/jacket_70.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 60,
+      photo: {
+        mob: 'img/mob/jacket_60.png',
+        tab: 'img/tab/jacket_60.png',
+        desk: 'img/desk/jacket_60.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 40,
+      photo: {
+        mob: 'img/mob/jacket_50.png',
+        tab: 'img/tab/jacket_50.png',
+        desk: 'img/desk/jacket_50.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 160,
+      photo: {
+        mob: 'img/mob/jacket_160_big.png',
+        tab: 'img/tab/jacket_160_big.png',
+        desk: 'img/desk/jacket_160_big.png'
+      },
+      alt: 'alt',
+      isPhotoBig: true
+    },
+    {
+      price: 40,
+      photo: {
+        mob: 'img/mob/jacket_40_2.png',
+        tab: 'img/tab/jacket_40_2.png',
+        desk: 'img/desk/jacket_40_2.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 110,
+      photo: {
+        mob: 'img/mob/jacket_110.png',
+        tab: 'img/tab/jacket_110.png',
+        desk: 'img/desk/jacket_110.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 35,
+      photo: {
+        mob: 'img/mob/jacket_35.png',
+        tab: 'img/tab/jacket_35.png',
+        desk: 'img/desk/jacket_35.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
+    {
+      price: 85,
+      photo: {
+        mob: 'img/mob/jacket_85.png',
+        tab: 'img/tab/jacket_85.png',
+        desk: 'img/desk/jacket_85.png'
+      },
+      alt: 'alt',
+      isPhotoBig: false
+    },
     {
       price: 40,
       photo: {
@@ -176,7 +356,7 @@
     }
   ]
 
-  var MORE_CATALOG = [
+  let MORE_CATALOG = [
     {
       category: 'Overalls',
       price: 140,
