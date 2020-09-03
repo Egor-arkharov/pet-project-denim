@@ -4,10 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <title>Overalls - Denim</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <meta name="description" content="Nimes overalls collection.">
+  <title>Overalls - Nimes</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/work-sans-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/work-sans-medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/anton-regular.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 <body>
+  <div style="display:none">
+    <include src="source/img/icons/sprite.svg"></include>
+  </div>
+
   <header class="header header--nojs">
     <div class="header__wrapper center">
       <button class="header__toggle-nav" type="button" aria-label="Open main nav"></button>
@@ -28,10 +36,10 @@
 
       <ul class="header__actions actions">
         <li class="actions__item">
-          <button class="actions__button actions__button-find"></button>
+          <button class="actions__button actions__button-find" aria-label="Find"></button>
         </li>
         <li class="actions__item">
-          <button class="actions__button actions__button-basket"></button>
+          <button class="actions__button actions__button-basket" aria-label="Basket"></button>
         </li>
       </ul>
     </div>
@@ -90,7 +98,7 @@
               <legend class="features__name">Color</legend>
               <ul class="features__list color__list">
                 <li class="color__item">
-                  <input type="radio" id="lightgreen" name="color-type" value="lightgreen" class="visually-hidden" checked>
+                  <input type="radio" id="lightgreen" name="color-type" value="lightgreen" class="visually-hidden" checked="">
                   <label for="lightgreen" class="color__name color__name--lightgreen color__name--active" tabindex="0"></label>
                 </li>
                 <li class="color__item">
@@ -98,7 +106,7 @@
                   <label for="blue" class="color__name color__name--blue" tabindex="0"></label>
                 </li>
                 <li class="color__item">
-                  <input type="radio" id="grey" name="color-type" value="grey" class="visually-hidden" >
+                  <input type="radio" id="grey" name="color-type" value="grey" class="visually-hidden">
                   <label for="grey" class="color__name color__name--grey" tabindex="0"></label>
                 </li>
               </ul>
@@ -112,7 +120,7 @@
                   <label for="xs" class="size__name" tabindex="0">XS</label>
                 </li>
                 <li>
-                  <input type="radio" id="s" name="size-type" value="S" class="visually-hidden" checked>
+                  <input type="radio" id="s" name="size-type" value="S" class="visually-hidden" checked="">
                   <label for="s" class="size__name size__name--active" tabindex="0">S</label>
                 </li>
                 <li>
@@ -124,7 +132,7 @@
                   <label for="l" class="size__name" tabindex="0">L</label>
                 </li>
                 <li>
-                  <input type="radio" id="xl" name="size-type" value="xl" class="visually-hidden">
+                  <input type="radio" id="xl" name="size-type" value="XL" class="visually-hidden">
                   <label for="xl" class="size__name" tabindex="0">XL</label>
                 </li>
               </ul>
@@ -163,10 +171,26 @@
       </nav>
       <div class="footer__social social">
         <ul class="social__list">
-          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Facebook"></a></li>
-          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Instagram"></a></li>
-          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Pinterest"></a></li>
-          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Twitter"></a></li>
+          <li class="social__item social__item--fb">
+            <a class="social__link" href="" aria-label="Facebook">
+              <svg class="social__link-img" width="11"><use xlink:href="#sm_fb"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--inst">
+            <a class="social__link" href="" aria-label="Instagram">
+              <svg class="social__link-img" width="20"><use xlink:href="#sm_inst"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--pint">
+            <a class="social__link" href="" aria-label="Pinterest">
+              <svg class="social__link-img" width="21"><use xlink:href="#sm_pint"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--tw">
+            <a class="social__link" href="" aria-label="Twitter">
+              <svg class="social__link-img" width="22"><use xlink:href="#sm_tw"></use></svg>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

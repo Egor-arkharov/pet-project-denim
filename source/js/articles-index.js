@@ -12,7 +12,7 @@
   window.card.renderCards(window.mocks.BY_CATEGORY, byCategoryList, byCategoryItem);
   window.card.renderCards(window.mocks.BESTSELLERS, bestsellersList, bestsellersItem);
 
-  var scrollBtn = document.querySelector('.info__scroll-down');
+  let scrollBtn = document.querySelector('.info__scroll-down');
 
   scrollBtn.addEventListener('click', function (evt) {
     evt.preventDefault();

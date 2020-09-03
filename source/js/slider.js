@@ -47,7 +47,7 @@
   let changePhotos = function (evt) {
     evt.preventDefault();
 
-    if (document.body.clientWidth < TAB_SIZE || evt.target.tagName !== 'IMG') {
+    if (document.body.clientWidth < TAB_SIZE || evt.target.tagName !== 'IMG' || evt.target.parentElement.parentElement.classList.contains('slider__item--big')) {
       return
     } else {
       let currentImgSrcset = evt.target.parentElement.querySelector(MEDIA_TAB_SIZE).srcset;

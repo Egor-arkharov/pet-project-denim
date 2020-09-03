@@ -4,10 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <title>Catalog - Denim</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <meta name="description" content="Nimes jeans catalog.">
+  <title>Jeans catalog - Nimes</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/work-sans-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/work-sans-medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/anton-regular.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/icons/sprite.svg"></include>
+  </div>
+
   <header class="header header--nojs">
     <div class="header__wrapper center">
       <button class="header__toggle-nav" type="button" aria-label="Open main nav"></button>
@@ -28,10 +36,10 @@
 
       <ul class="header__actions actions">
         <li class="actions__item">
-          <button class="actions__button actions__button-find"></button>
+          <button class="actions__button actions__button-find" aria-label="Find"></button>
         </li>
         <li class="actions__item">
-          <button class="actions__button actions__button-basket"></button>
+          <button class="actions__button actions__button-basket" aria-label="Basket"></button>
         </li>
       </ul>
     </div>
@@ -64,7 +72,7 @@
         <button class="filter__btn-opened button-toggle" type="button">Filter by <span class="filter__arrow"></span></button>
 
         <div class="filter__filters visually-hidden">
-          <h3 class="filter__heading">Filters</h3>
+          <h2 class="filter__heading">Filters</h2>
 
           <ul class="filter__list">
             <li class="price">
@@ -131,6 +139,7 @@
     </section>
 
     <section class="catalog catalog-main">
+      <h2 class="visually-hidden">Jeans catalog</h2>
       <div class="catalog__wrapper catalog__list center">
         <!-- Карточки -->
       </div>
@@ -138,7 +147,7 @@
 
     <section class="catalog-bar">
       <div class="catalog-bar__wrapper center">
-        <p class="catalog-bar__items">Showing 9 of 45 items</p>
+        <p class="catalog-bar__items">Showing <span class="catalog-bar__show">9</span> of 27 items</p>
         <div class="catalog-bar__scale">
           <div class="catalog-bar__bar"></div>
         </div>
@@ -161,10 +170,26 @@
       </nav>
       <div class="footer__social social">
         <ul class="social__list">
-          <li class="social__item social__item--fb"><a class="social__link" href=""><img src="img/icons/sm_fb.svg" alt="Facebook"></a></li>
-          <li class="social__item social__item--inst"><a class="social__link" href=""><img src="img/icons/sm_inst.svg" alt="Instagram"></a></li>
-          <li class="social__item social__item--pint"><a class="social__link" href=""><img src="img/icons/sm_pint.svg" alt="Pinterest"></a></li>
-          <li class="social__item social__item--tw"><a class="social__link" href=""><img src="img/icons/sm_tw.svg" alt="Twitter"></a></li>
+          <li class="social__item social__item--fb">
+            <a class="social__link" href="" aria-label="Facebook">
+              <svg class="social__link-img" width="11"><use xlink:href="#sm_fb"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--inst">
+            <a class="social__link" href="" aria-label="Instagram">
+              <svg class="social__link-img" width="20"><use xlink:href="#sm_inst"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--pint">
+            <a class="social__link" href="" aria-label="Pinterest">
+              <svg class="social__link-img" width="21"><use xlink:href="#sm_pint"></use></svg>
+            </a>
+          </li>
+          <li class="social__item social__item--tw">
+            <a class="social__link" href="" aria-label="Twitter">
+              <svg class="social__link-img" width="22"><use xlink:href="#sm_tw"></use></svg>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
