@@ -45,6 +45,12 @@
   }
 }
 
+@media (min-width: 550px) {
+  .catalog-main .catalog__item {
+    margin-right: 50px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .bestsellers .catalog__wrapper {
     padding-top: 94px;
