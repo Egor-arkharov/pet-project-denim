@@ -1,14 +1,13 @@
-Пет-проект Архарова Егора по макету HTML Academy.
+# Пет-проект Архарова Егора по макету HTML Academy.
 
 
-Установить папку build: npm run build
-
-Запустить сайт локально: npm start
+* Установить папку build: npm run build
+* Запустить сайт локально: npm start
 
 
 GH Pages: https://egor-arkharov.github.io/pet-project-denim/source/index.html
 
 
-FB: https://www.facebook.com/egor.arkharov/
+* FB: https://www.facebook.com/egor.arkharov/
 
-TG: @EgorArkharov
+* TG: @EgorArkharov
