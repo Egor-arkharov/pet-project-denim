@@ -5,7 +5,3 @@
 * Запустить сайт локально: npm start
 
 GH Pages: https://egor-arkharov.github.io/pet-project-denim/source/index.html
-
-* FB: https://www.facebook.com/egor.arkharov/
-
-* TG: @EgorArkharov
