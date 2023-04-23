@@ -1,7 +1,6 @@
-# Пет-проект: магазин одежды
-Макет от HTML Academy.
+# Pet project: clothing store
 
-* Установить папку build: npm run build
-* Запустить сайт локально: npm start
+* build: npm run build
+* local: npm start
 
-GH Pages: https://egor-arkharov.github.io/pet-project-denim/source/index.html
+* host: https://egor-arkharov.github.io/pet-project-denim/source/index.html
